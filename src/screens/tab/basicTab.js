@@ -14,6 +14,7 @@ import {
 import TabOne from "./tabOne";
 import TabTwo from "./tabTwo";
 // import TabThree from "./tabThree";
+import { createMaterialTopTabNavigator  } from "react-navigation";
 
 
 class BasicTab extends Component {
@@ -59,3 +60,12 @@ class BasicTab extends Component {
 }
 
 export default BasicTab;
+
+// export default createMaterialTopTabNavigator({
+//   Series: TabOne,
+//   Movies: TabTwo,
+// });
+
+
+
+
