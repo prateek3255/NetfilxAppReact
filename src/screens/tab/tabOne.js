@@ -19,20 +19,27 @@ class TabOne extends Component {
                source={require("../../../assets/breaking.jpg")}/>
           </View>
           </TouchableHighlight>
-          <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:"../../../assets/narcos.jpg",name:'Narcos'})} underlayColor="white">
+          <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:1,name:'Narcos'})} underlayColor="white">
             <View>
               <Image
                style={styles.image} 
                source={require("../../../assets/narcos.jpg")}/>
             </View>
           </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:2,name:'Stranger Things'})}>
+            <View>
               <Image
                style={styles.image} 
                source={require("../../../assets/stranger.jpg")}/>
-         
+            </View>
+         </TouchableHighlight>
+         <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:3,name:'Game of thrones'})}>
+            <View>
               <Image
                style={styles.image} 
                source={require("../../../assets/thrones.jpg")}/>
+                </View>
+         </TouchableHighlight>
          </View>
       </Content>
     );
