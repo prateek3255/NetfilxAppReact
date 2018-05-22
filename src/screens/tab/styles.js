@@ -31,18 +31,18 @@ export default {
     color: "#C14748"
   },
   trailer: {
-    height: 80,
+    height: 60,
     width: 520,
     backgroundColor: "#C14748"
   },
   trailerText: {
     color: "white",
     fontSize: 25,
-    top: 22,
+    top: 15,
     left: 25
   },
   ratings: {
-    flex:0.1,
+    flex:0.16,
     flexDirection: "row",
   },
   rating: {
@@ -97,7 +97,7 @@ export default {
   },
   cardImage:{
     width:230,
-    height:230
+    height:250
   },
   cardImageText:{
     color:'white',

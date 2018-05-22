@@ -18,6 +18,7 @@ import BasicTab from "./screens/tab/basicTab";
 import TabOne from "./screens/tab/tabOne";
 import TabTwo from "./screens/tab/tabTwo";
 import Detail from "./screens/tab/detailScreen";
+import Episodes from "./screens/tab/episodes";
 import SideBar from "./screens/sidebar";
 
 
@@ -85,7 +86,8 @@ const AppNavigator = StackNavigator(
   {
     Drawer: { screen: Drawer },
     TabHome: { screen: TabHome},
-    Detail: {screen: Detail}
+    Detail: {screen: Detail},
+    Episodes: {screen:Episodes}
     },
   {
     initialRouteName: "Drawer",
