@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import { Content,Button } from "native-base";
 import {Image,View,TouchableHighlight,Text} from "react-native";
 import styles from "./styles";
+import BasicTab from "./basicTab";
 
 class TabOne extends Component {
+  // static navigationOptions={
+  //   title:'Series'
+  // }
 
   constructor(props){
     super(props);

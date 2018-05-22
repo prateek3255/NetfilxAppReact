@@ -5,16 +5,10 @@ import {
   Title,
   Button,
   Icon,
-  Tabs,
-  Tab,
   Right,
   Left,
   Body
 } from "native-base";
-import TabOne from "./tabOne";
-import TabTwo from "./tabTwo";
-// import TabThree from "./tabThree";
-import { createMaterialTopTabNavigator  } from "react-navigation";
 
 
 class BasicTab extends Component {
@@ -45,15 +39,6 @@ class BasicTab extends Component {
             </Button>
           </Right>
         </Header>
-
-        <Tabs>
-          <Tab heading="Series">
-            <TabOne />
-          </Tab>
-          <Tab heading="Movies">
-            <TabTwo />
-          </Tab>
-        </Tabs>
       </Container>
     );
   }

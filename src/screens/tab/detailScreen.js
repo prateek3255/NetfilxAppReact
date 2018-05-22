@@ -6,13 +6,16 @@ import {
   Header,
   Left,
   Right,
-  Title,
-  Body
+  Card,
+  CardItem
 } from "native-base";
-import { ImageBackground, View, Text } from "react-native";
+import { ImageBackground, View, Text,ScrollView } from "react-native";
 import styles from "./styles";
 
 export default class DetailScreen extends Component {
+    static navigationOptions = {
+        header: null,
+        };
   constructor(props) {
     super(props);
     this.arr = [
@@ -24,7 +27,7 @@ export default class DetailScreen extends Component {
   }
   render() {
     return (
-      <Container>
+      <Container style={{flex:1,flexDirection:'column'}}>  
         <ImageBackground
           style={styles.detailImage}
           source={this.arr[this.props.navigation.state.params.image]}
@@ -56,59 +59,91 @@ export default class DetailScreen extends Component {
         <View style={styles.trailer}>
           <Text style={styles.trailerText}>Watch Trailer Season 1</Text>
         </View>
-        <View style={styles.ratings}>
-          <View style={styles.rating}>
-            <View>
+        
+          <View style={styles.ratings}>
+            <View style={styles.rating}>
+              <Icon name="ios-star" style={styles.background} />
+              <Icon name="ios-star" style={styles.background} />
+              <Icon name="ios-star" style={styles.background} />
+              <Icon name="ios-star" style={styles.background} />
               <Icon name="ios-star" style={styles.background} />
             </View>
-            <View>
-              <Icon name="ios-star" style={styles.background} />
-            </View>
-            <View>
-              <Icon name="ios-star" style={styles.background} />
-            </View>
-            <View>
-              <Icon name="ios-star" style={styles.background} />
-            </View>
-            <View>
-              <Icon name="ios-star" style={styles.background} />
-            </View>
-          </View>
-          <View style={{ flex: 0.4 }}>
-            <Text style={{ fontSize: 19 }}>5.0/5</Text>
-          </View>
-          <View
-            style={{
-              flex: 0.2,
-              flexDirection: "row",
-              justifyContent: "flex-end"
-            }}
-          >
-            <View>
+            <Text style={styles.rateText}>5.0/5</Text>
+            <View style={styles.rate}/>
+            <View style={styles.comment}>
               <Icon name="md-chatbubbles" style={styles.background} />
-            </View>
-            <View>
-              <Text style={{ fontSize: 19, marginLeft: 9 }}>279</Text>
+              <Text style={styles.rateText}>279</Text>
             </View>
           </View>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-          }}
-        >
+       
+        <View style={styles.show}>
           <View>
-            <Text style={{ fontWeight: "bold", fontSize: 23 }}>
+            <Text style={styles.showName}>
               {this.props.navigation.state.params.name}
             </Text>
           </View>
           <View>
-            <Text style={{ marginLeft: 10, fontStyle: "italic", fontSize: 20 }}>
+            <Text style={styles.showGenre}>
               Crime, Drama
             </Text>
           </View>
         </View>
+
+        <View style={styles.description}>
+          <Text style={styles.rateText}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</Text>
+        </View>
+
+        <ScrollView style={styles.seasons}>
+        <View style={{flexDirection: 'row',
+                      backgroundColor: 'grey',
+                      flexWrap: 'wrap',
+                      justifyContent:'space-evenly'}}>
+        <View>
+        <Card style={styles.seasonCard}>
+            <CardItem cardBody>
+              <ImageBackground source={require("../../../assets/narcosS02.jpg")} style={styles.cardImage}>
+              <Text style={styles.cardImageText}>Season 1</Text>
+              </ImageBackground>
+            </CardItem>
+            <CardItem footer>
+             <Left>
+              <Text>7/13 episodes</Text>
+             </Left>
+             <Right>
+              <Button transparent><Icon name="md-more"/></Button>
+             </Right>
+            </CardItem>
+          </Card>
+          </View>
+          <View>
+          <Card style={styles.seasonCard}>
+            <CardItem cardBody >
+            <ImageBackground source={require("../../../assets/narcosS02.jpg")} style={styles.cardImage}>
+              <Text style={styles.cardImageText}>Season 2</Text>
+              </ImageBackground>
+            </CardItem>
+          </Card>
+          </View>
+          <View>
+          <Card style={styles.seasonCard}>
+            <CardItem cardBody >
+            <ImageBackground source={require("../../../assets/narcosS02.jpg")} style={styles.cardImage}>
+            <Text style={styles.cardImageText}>Season 3</Text>
+              </ImageBackground>
+            </CardItem>
+          </Card>
+          </View>
+          <View>
+          <Card style={styles.seasonCard}>
+            <CardItem cardBody >
+            <ImageBackground source={require("../../../assets/narcosS01.jpg")} style={styles.cardImage}>
+            <Text style={styles.cardImageText}>Season 2</Text>
+              </ImageBackground>
+            </CardItem>
+          </Card>
+          </View>
+        </View>
+        </ScrollView>
       </Container>
     );
   }

@@ -11,9 +11,10 @@ import {
   Tab,
   Right,
   Left,
-  Body
+  Body,
 } from "native-base";
-// import BasicTab from "./screens/tab/basicTab";
+import {View, StatusBar} from "react-native";
+import BasicTab from "./screens/tab/basicTab";
 import TabOne from "./screens/tab/tabOne";
 import TabTwo from "./screens/tab/tabTwo";
 import Detail from "./screens/tab/detailScreen";
@@ -22,12 +23,48 @@ import SideBar from "./screens/sidebar";
 
 
 const TabHome = TabNavigator({
-  Series:{screen:TabOne},
-  Movies:{screen:TabTwo}
+  Series:{screen:TabOne,navigationOptions: {  tabBarLabel: 'Series'  }},
+  Movies:{screen:TabTwo,navigationOptions: {  tabBarLabel: 'Movies'  }}
 },
 {
   swipeEnabled:true,
+  navigationOptions:({navigation})=> ({
+    title:'Netflix',
+    headerLeft:(
+      <View style={{flex:1,flexDirection:'row'}}>
+      <Button
+              transparent
+              onPress={() => navigation.navigate("DrawerOpen")}
+            >
+              <Icon name="menu" style={{color:'white'}}/>
+            </Button>
+          </View>
+    ),
+    headerRight:(
+      <View style={{flex:1,flexDirection:'row'}}>
+      <Button transparent>
+              <Icon name="search" style={{color:'white'}}/>
+            </Button>
+            <Button transparent>
+              <Icon name="md-more" style={{color:'white'}}/>
+            </Button>
+            </View>      
+    ),
+    headerStyle:{
+      backgroundColor:'#2B2C30'
+    },
+    headerTitleStyle: {
+      color: '#C14748',
+    },
+  }),
+  tabBarOptions: {
+      style:{
+        backgroundColor:'#2B2C30'
+      }
+      
+    }
   
+
 }
 );
 
@@ -47,16 +84,17 @@ const Drawer = DrawerNavigator(
 const AppNavigator = StackNavigator(
   {
     Drawer: { screen: Drawer },
-    TabHome: { screen: TabHome },
+    TabHome: { screen: TabHome},
     Detail: {screen: Detail}
     },
   {
     initialRouteName: "Drawer",
-    headerMode: "none"
+    // headerMode: "none"
   }
 );
 
 export default () =>
   <Root>
+  <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
     <AppNavigator />
   </Root>;
