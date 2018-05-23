@@ -95,14 +95,7 @@ export default class DetailScreen extends Component {
         </View>
 
         <ScrollView style={styles.seasons}>
-          <View
-            style={{
-              flexDirection: "row",
-              backgroundColor: "grey",
-              flexWrap: "wrap",
-              justifyContent: "space-evenly"
-            }}
-          >
+          <View style={styles.scroll}>
             <View>
             <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles.seasonCard}>
@@ -115,7 +108,7 @@ export default class DetailScreen extends Component {
                   </ImageBackground>
                 </CardItem>
                 <CardItem style={{ paddingTop: 0 }}>
-                  <View style={{ flex: 1, flexDirection: "row", height: 27 }}>
+                  <View style={styles.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
                     </View>

@@ -12,7 +12,36 @@ import {
 import { ImageBackground, View, Text, ScrollView } from "react-native";
 import styles from "./styles";
 
-// const items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
+const eps = [
+    {name:'Breaking 1',
+     no:1   },
+     {name:'Breaking 1',
+     no:2   },
+     {name:'Green Light',
+     no:3   },
+     {name:'BLue Light',
+     no:4   },
+     {name:'The Fly',
+     no:5   },
+     {name:'The Escape',
+     no:7 },
+     {name:'The Escape',
+     no:8 },
+     {name:'The Escape',
+     no:9 },
+     {name:'The Escape',
+     no:10 },
+     {name:'The Escape',
+     no:11 },
+     {name:'The Escape',
+     no:12 },
+     {name:'The Escape',
+     no:13 },
+     {name:'The Escape',
+     no:14 },
+     {name:'The Escape',
+     no:15 }
+];
 export default class Episodes extends Component {
   static navigationOptions = {
     header: null
@@ -26,21 +55,12 @@ export default class Episodes extends Component {
       require("../../../assets/thrones.jpg")
     ];
   }
+
+  renderScrollViewContent(){
+
+  }
   render() {
-    const eps = [
-        {name:'Breaking 1',
-         no:1   },
-         {name:'Breaking 1',
-         no:2   },
-         {name:'Green Light',
-         no:3   },
-         {name:'BLue Light',
-         no:4   },
-         {name:'The Fly',
-         no:5   },
-         {name:'The Escape',
-         no:6 }
-    ];
+    
    
     return (
       <Container style={{ flex: 1, flexDirection: "column" }}>
@@ -79,21 +99,21 @@ export default class Episodes extends Component {
         <List dataArray={eps}
             renderRow={(ep) =>
               <ListItem>
-                <View style={{flex:1,flexDirection:'row',height:40}}>
+                <View style={styles.episodeView}>
                 
-                <View style={{flex:0.01,height:40,backgroundColor:'orange'}}/>
+                <View style={styles.episodeWatched}/>
                 
-                <View style={{flex:0.9}}>
-                <View style={{flex:0.5,flexDirection:'row',alignItems:'center'}}>
-                    <Text style={{fontSize:15,fontWeight:'bold'}}>{'    '+ep.name}</Text><Text>{'  '}S01E{ep.no}</Text>
+                <View style={styles.episodeDetailView}>
+                <View style={styles.episodeNameView}>
+                    <Text style={styles.episodeTitle}>{'    '+ep.name}</Text><Text>{'  '}S01E{ep.no}</Text>
                 </View>
-                <View style={{flex:0.5,flexDirection:'row',alignItems:'center'}}>
-                    <Text>{'    '}</Text><Icon name="ios-time-outline" style={{fontSize:15}}/><Text>{'  '}49:56{'          '}</Text>
-                    <Icon name="ios-closed-captioning" style={{fontSize:15}}/><Text>{'  '}vost-english</Text>
+                <View style={styles.episodeNameView}>
+                    <Text>{'    '}</Text><Icon name="ios-time-outline" style={styles.episodeIcon}/><Text>{'  '}49:56{'          '}</Text>
+                    <Icon name="ios-closed-captioning" style={styles.episodeIcon}/><Text>{'  '}vost-english</Text>
                 </View>
                 </View>
 
-                <View style={{flex:0.05}}><Icon name="md-more"/></View>
+                <View style={styles.episodeMore}><Icon name="md-more"/></View>
     
                 </View>
               </ListItem>

@@ -1,3 +1,9 @@
+const React = require('react-native')
+const { Dimensions }=React
+const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get('window').width;
+
+
 export default {
   container: {
     backgroundColor: "#FFF"
@@ -6,40 +12,40 @@ export default {
     color: "#C14748"
   },
   image: {
-    width: 520,
-    height: 320
+    width: deviceWidth,
+    height: deviceHeight/3
   },
   detailImage: {
-    width: 520,
-    height: 450
+    width: deviceWidth,
+    height: deviceHeight/2.2
   },
   button: {
-    height: 80,
-    width: 80,
+    height: deviceHeight/11,
+    width: deviceHeight/11,
     backgroundColor: "white"
   },
   buttonAlign: {
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    left: 400,
-    top: 200
+    left: (deviceWidth/6)*4.5,
+    top: deviceHeight/5
   },
   play: {
     fontSize: 43,
-    left: 17,
+    left: deviceHeight/60,
     color: "#C14748"
   },
   trailer: {
-    height: 60,
-    width: 520,
+    height: deviceHeight/13,
+    width: deviceWidth,
     backgroundColor: "#C14748"
   },
   trailerText: {
     color: "white",
     fontSize: 25,
-    top: 15,
-    left: 25
+    top: deviceHeight/55,
+    left: deviceWidth/25
   },
   ratings: {
     flex:0.16,
@@ -84,26 +90,57 @@ export default {
     backgroundColor:'red', 
   },
   seasonCard:{
-    width:230,
-    height:280,
+    width:deviceWidth/2.25,
+    height:deviceHeight/3.1,
     backgroundColor: 'white',
-    marginLeft:10,
-    marginRight:10,
-    marginTop: 10,
-    marginBottom: 10,
+    marginLeft:deviceHeight/70,
+    marginRight:deviceHeight/70,
+    marginTop: deviceHeight/70,
+    marginBottom: deviceHeight/70,
     alignItems: 'center',
     padding:0
 
   },
   cardImage:{
-    width:230,
-    height:250
+    width:deviceWidth/2.25,
+    height:deviceHeight/3.5
   },
   cardImageText:{
     color:'white',
     fontSize:20,
     fontWeight:'bold',
-    top:200,
-    left:20
-  }
+    top:deviceHeight/4.3,
+    left:deviceWidth/25
+  },
+  scroll:{
+    flexDirection: "row",
+    backgroundColor: "grey",
+    flexWrap: "wrap",
+    justifyContent: "space-evenly"
+  },
+  cardFoot:{ flex: 1, 
+  flexDirection: "row", 
+  height: deviceHeight/35 },
+  
+  episodeView:{flex:1,
+    flexDirection:'row',
+    height:deviceHeight/22},
+
+  episodeWatched:{flex:0.01,
+    height:deviceHeight/22,
+    backgroundColor:'orange'},
+
+  episodeDetailView:{flex:0.9} ,
+
+  episodeNameView:{flex:0.5,
+    flexDirection:'row',
+    alignItems:'center'},
+
+  episodeTitle:{fontSize:15,
+    fontWeight:'bold'},
+
+  episodeIcon:{fontSize:15},
+
+  episodeMore:{flex:0.05}
+
 };
