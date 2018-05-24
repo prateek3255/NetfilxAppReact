@@ -141,6 +141,8 @@ export default {
 
   episodeIcon:{fontSize:15},
 
-  episodeMore:{flex:0.05}
+  episodeMore:{flex:0.05},
 
+  
+  
 };
