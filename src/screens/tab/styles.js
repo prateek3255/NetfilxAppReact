@@ -33,13 +33,14 @@ export default {
   },
   play: {
     fontSize: 43,
-    left: deviceHeight/60,
+    left: deviceWidth/35,
     color: "#C14748"
   },
   trailer: {
     height: deviceHeight/13,
     width: deviceWidth,
-    backgroundColor: "#C14748"
+    backgroundColor: "#C14748",
+    flex:0.2
   },
   trailerText: {
     color: "white",
@@ -47,14 +48,27 @@ export default {
     top: deviceHeight/55,
     left: deviceWidth/25
   },
+  remaining:{
+    height: deviceHeight/6,
+    width: deviceWidth,
+    backgroundColor: "white",
+    flex:0.5,
+    zIndex:5,
+    paddingLeft:deviceWidth/40,
+    paddingRight:deviceWidth/40
+  },
+
   ratings: {
-    flex:0.16,
+    flex:0.25,
     flexDirection: "row",
+    backgroundColor:'white',
+    alignItems:'center'
   },
   rating: {
     flex: 0.3,
     flexDirection: "row",
     justifyContent: "space-evenly",
+    backgroundColor:'white',
   },
   rate: {
     flex: 0.4
@@ -69,8 +83,9 @@ export default {
   },
 
   show:{
-    flex:0.1,
-    flexDirection:'row'
+    flex:0.3,
+    flexDirection:'row',
+    alignItems:'center'
   },
   showName:{
      fontWeight: "bold", 
@@ -82,8 +97,9 @@ export default {
      fontSize: 20 
   },
   description:{
-    flex:0.35,
-    flexDirection:'row'
+    flex:0.5,
+    flexDirection:'row',
+    justifyContent:'center'
   },
   seasons:{
     flex:0.5, 
