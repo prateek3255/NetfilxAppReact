@@ -7,7 +7,8 @@ import {
   Text,
   View,
   RefreshControl,
-  Dimensions
+  Dimensions,
+  TouchableHighlight
 } from "react-native";
 import {
   Button,
@@ -110,7 +111,7 @@ export default class App extends Component {
         <List
           dataArray={eps}
           renderRow={ep =>
-            <ListItem noBorder>
+            <ListItem noBorder button={true} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
               <View style={styles1.episodeView}>
                 <View style={styles1.episodeWatched} />
 
@@ -255,11 +256,11 @@ export default class App extends Component {
                   { translateY: viewTranslate },
                   { scale: viewScale }
                 ],
-                zIndex: 3
+                zIndex: 7
               }
             ]}
           >
-            <Button rounded style={styles1.button}>
+            <Button rounded style={styles1.button} onPress={()=>this.props.navigation.navigate("VideoPlayer")}>
               <Icon style={styles1.play} name="play" />
             </Button>
           </Animated.View>

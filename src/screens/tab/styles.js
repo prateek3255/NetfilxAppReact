@@ -22,7 +22,8 @@ export default {
   button: {
     height: deviceHeight/11,
     width: deviceHeight/11,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    elevation:15
   },
   buttonAlign: {
     flex: 1,
@@ -40,7 +41,10 @@ export default {
     height: deviceHeight/13,
     width: deviceWidth,
     backgroundColor: "#C14748",
-    flex:0.2
+    flex:0.2,
+    shadowColor:'black',
+    shadowRadius:2,
+    shadowOffset:{height:10,width:10}
   },
   trailerText: {
     color: "white",
@@ -55,7 +59,10 @@ export default {
     flex:0.5,
     zIndex:5,
     paddingLeft:deviceWidth/40,
-    paddingRight:deviceWidth/40
+    paddingRight:deviceWidth/40,
+    // borderBottomColor:'grey',
+    // borderBottomWidth:20
+    elevation:50
   },
 
   ratings: {
@@ -130,7 +137,7 @@ export default {
   },
   scroll:{
     flexDirection: "row",
-    backgroundColor: "grey",
+    backgroundColor: "white",
     flexWrap: "wrap",
     justifyContent: "space-evenly"
   },

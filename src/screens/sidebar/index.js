@@ -8,10 +8,11 @@ import {
   Icon,
   Container,
   Left,
+  Header
 } from "native-base";
 import styles from "./style";
 
-const drawerCover = require("../../../assets/drawer-cover.png");
+const drawerCover = require("../../../assets/netflix.png");
 const drawerImage = require("../../../assets/logo-kitchen-sink.png");
 const sidebars = [
   {
@@ -42,9 +43,6 @@ const sidebars = [
 ];
 
 class SideBar extends Component {
-  static navigationOptions = {
-    header: null
-  };
 
   constructor(props) {
     super(props);
@@ -56,13 +54,12 @@ class SideBar extends Component {
 
   render() {
     return (
-      <Container>
-        <Content
+      <Container>    
+      <Content
           bounces={false}
           style={{ flex: 1, backgroundColor: "#fff", top: -1 }}
         >
           <Image source={drawerCover} style={styles.drawerCover} />
-          <Image square style={styles.drawerImage} source={drawerImage} />
 
           <List
             dataArray={sidebars}

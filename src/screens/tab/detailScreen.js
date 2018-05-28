@@ -80,76 +80,134 @@ export default class App extends Component {
               </TouchableHighlight>
             </View>
             <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
+              <Card style={styles1.seasonCard}>
+                <CardItem cardBody>
+                  <ImageBackground
+                    source={require("../../../assets/narcosS01.jpg")}
+                    style={styles1.cardImage}
+                  >
+                    <Text style={styles1.cardImageText}>Season 1</Text>
+                  </ImageBackground>
+                </CardItem>
+                <CardItem style={{ paddingTop: 0 }}>
+                  <View style={styles1.cardFoot}>
+                    <View style={{ flex: 0.8 }}>
+                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                    </View>
+                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                      <Button transparent>
+                        <Icon name="md-more" />
+                      </Button>
+                    </View>
+                  </View>
+                </CardItem>
+              </Card>
+              </TouchableHighlight>
+            </View>
+            <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles1.seasonCard}>
                 <CardItem cardBody>
                   <ImageBackground
                     source={require("../../../assets/narcosS02.jpg")}
                     style={styles1.cardImage}
                   >
-                    <Text style={styles1.cardImageText}>Season 2</Text>
+                    <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
+                <CardItem style={{ paddingTop: 0 }}>
+                  <View style={styles1.cardFoot}>
+                    <View style={{ flex: 0.8 }}>
+                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                    </View>
+                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                      <Button transparent>
+                        <Icon name="md-more" />
+                      </Button>
+                    </View>
+                  </View>
+                </CardItem>
               </Card>
+              </TouchableHighlight>
             </View>
             <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
+              <Card style={styles1.seasonCard}>
+                <CardItem cardBody>
+                  <ImageBackground
+                    source={require("../../../assets/narcosS01.jpg")}
+                    style={styles1.cardImage}
+                  >
+                    <Text style={styles1.cardImageText}>Season 1</Text>
+                  </ImageBackground>
+                </CardItem>
+                <CardItem style={{ paddingTop: 0 }}>
+                  <View style={styles1.cardFoot}>
+                    <View style={{ flex: 0.8 }}>
+                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                    </View>
+                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                      <Button transparent>
+                        <Icon name="md-more" />
+                      </Button>
+                    </View>
+                  </View>
+                </CardItem>
+              </Card>
+              </TouchableHighlight>
+            </View>
+            <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles1.seasonCard}>
                 <CardItem cardBody>
                   <ImageBackground
                     source={require("../../../assets/narcosS02.jpg")}
                     style={styles1.cardImage}
                   >
-                    <Text style={styles1.cardImageText}>Season 3</Text>
+                    <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
+                <CardItem style={{ paddingTop: 0 }}>
+                  <View style={styles1.cardFoot}>
+                    <View style={{ flex: 0.8 }}>
+                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                    </View>
+                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                      <Button transparent>
+                        <Icon name="md-more" />
+                      </Button>
+                    </View>
+                  </View>
+                </CardItem>
               </Card>
+              </TouchableHighlight>
             </View>
             <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles1.seasonCard}>
                 <CardItem cardBody>
                   <ImageBackground
                     source={require("../../../assets/narcosS01.jpg")}
                     style={styles1.cardImage}
                   >
-                    <Text style={styles1.cardImageText}>Season 2</Text>
+                    <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-              </Card>
-            </View>
-            <View>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 2</Text>
-                  </ImageBackground>
+                <CardItem style={{ paddingTop: 0 }}>
+                  <View style={styles1.cardFoot}>
+                    <View style={{ flex: 0.8 }}>
+                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                    </View>
+                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                      <Button transparent>
+                        <Icon name="md-more" />
+                      </Button>
+                    </View>
+                  </View>
                 </CardItem>
               </Card>
-            </View>
-            <View>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 2</Text>
-                  </ImageBackground>
-                </CardItem>
-              </Card>
-            </View>
-            <View>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 2</Text>
-                  </ImageBackground>
-                </CardItem>
-              </Card>
+              </TouchableHighlight>
             </View>
       </View>
     );
@@ -264,11 +322,11 @@ export default class App extends Component {
                   { translateY: viewTranslate },
                   { scale: viewScale }
                 ],
-                zIndex: 3
+                zIndex: 6
               }
             ]}
           >
-            <Button rounded style={styles1.button}>
+            <Button rounded style={styles1.button} onPress={()=>this.props.navigation.navigate("VideoPlayer")}>
               <Icon style={styles1.play} name="play" />
             </Button>
           </Animated.View>

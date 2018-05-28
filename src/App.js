@@ -19,6 +19,7 @@ import TabOne from "./screens/tab/tabOne";
 import TabTwo from "./screens/tab/tabTwo";
 import Detail from "./screens/tab/detailScreen";
 import Episodes from "./screens/tab/episodes";
+import VideoPlayer from "./screens/tab/video";
 import SideBar from "./screens/sidebar";
 
 
@@ -87,7 +88,8 @@ const AppNavigator = StackNavigator(
     Drawer: { screen: Drawer },
     TabHome: { screen: TabHome},
     Detail: {screen: Detail},
-    Episodes: {screen:Episodes}
+    Episodes: {screen:Episodes},
+    VideoPlayer: {screen:VideoPlayer},
     },
   {
     initialRouteName: "Drawer",
