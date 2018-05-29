@@ -64,7 +64,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
@@ -90,7 +90,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
@@ -116,7 +116,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
@@ -142,7 +142,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
@@ -168,7 +168,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
@@ -194,7 +194,7 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={{ paddingTop: 0 }}>
+                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
                       <Text style={{ fontSize: 17 }}>7/13 episodes</Text>

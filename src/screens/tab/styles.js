@@ -141,6 +141,9 @@ export default {
     flexWrap: "wrap",
     justifyContent: "space-evenly"
   },
+  episodeCardItem:{
+     paddingTop:deviceHeight/180  
+  },
   cardFoot:{ flex: 1, 
   flexDirection: "row", 
   height: deviceHeight/35 },
@@ -165,7 +168,7 @@ export default {
   episodeIcon:{fontSize:15},
 
   episodeMore:{flex:0.05},
-
+    
   
   
 };

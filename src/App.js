@@ -21,6 +21,8 @@ import Detail from "./screens/tab/detailScreen";
 import Episodes from "./screens/tab/episodes";
 import VideoPlayer from "./screens/tab/video";
 import SideBar from "./screens/sidebar";
+import Register from "./screens/LoginScreens/Register";
+import Login from "./screens/LoginScreens/Login";
 
 
 
@@ -70,35 +72,38 @@ const TabHome = TabNavigator({
 }
 );
 
-const Drawer = DrawerNavigator(
-  {
-    NHTab: { screen: TabHome }
 
-  },
-  {
-    initialRouteName: "NHTab",
-    contentOptions: {
-      activeTintColor: "#e91e63"
-    },
-    contentComponent: props => <SideBar {...props} />
-  }
-);
 const AppNavigator = StackNavigator(
   {
-    Drawer: { screen: Drawer },
+    // Drawer: { screen: Drawer },
+    Register:{screen:Register},
+    Login:{screen:Login},
     TabHome: { screen: TabHome},
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
     VideoPlayer: {screen:VideoPlayer},
     },
   {
-    initialRouteName: "Drawer",
+    initialRouteName: "Register",
     // headerMode: "none"
+  }
+);
+const Drawer = DrawerNavigator(
+  {
+    App: { screen: AppNavigator }
+
+  },
+  {
+    initialRouteName: "App",
+    contentOptions: {
+      activeTintColor: "#e91e63"
+    },
+    contentComponent: props => <SideBar {...props} />
   }
 );
 
 export default () =>
   <Root>
   <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
-    <AppNavigator />
+    <Drawer />
   </Root>;

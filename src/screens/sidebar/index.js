@@ -43,6 +43,10 @@ const sidebars = [
 ];
 
 class SideBar extends Component {
+  static navigationOptions = {
+    drawerLabel: () => null,
+    header:false
+    }
 
   constructor(props) {
     super(props);
