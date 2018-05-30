@@ -27,12 +27,12 @@ const sidebars = [
   },
   {
     name: "Notifications",
-    route: "Notificaitons",
+    route: "Notification",
     icon: "md-notifications",
   },
   {
     name: "Settings",
-    route: "Settings",
+    route: "Setting",
     icon: "md-settings",
   },
   {

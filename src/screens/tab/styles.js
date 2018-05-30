@@ -9,7 +9,8 @@ export default {
     backgroundColor: "#FFF"
   },
   background: {
-    color: "#C14748"
+    color: "#C14748",
+    fontSize:20
   },
   image: {
     width: deviceWidth,
@@ -33,8 +34,8 @@ export default {
     top: deviceHeight/5
   },
   play: {
-    fontSize: 43,
-    left: deviceWidth/35,
+    fontSize: 35,
+    left: deviceWidth/40,
     color: "#C14748"
   },
   trailer: {
@@ -48,7 +49,7 @@ export default {
   },
   trailerText: {
     color: "white",
-    fontSize: 25,
+    fontSize: 20,
     top: deviceHeight/55,
     left: deviceWidth/25
   },
@@ -81,7 +82,7 @@ export default {
     flex: 0.4
   },
   rateText: {
-    fontSize: 19
+    fontSize: 15
   },
   comment: {
     flex: 0.15,
@@ -96,12 +97,12 @@ export default {
   },
   showName:{
      fontWeight: "bold", 
-     fontSize: 23 
+     fontSize: 20 
   },
   showGenre:{
      left: 10, 
      fontStyle: "italic", 
-     fontSize: 20 
+     fontSize: 17 
   },
   description:{
     flex:0.5,
@@ -130,7 +131,7 @@ export default {
   },
   cardImageText:{
     color:'white',
-    fontSize:20,
+    fontSize:17,
     fontWeight:'bold',
     top:deviceHeight/4.3,
     left:deviceWidth/25
@@ -147,6 +148,17 @@ export default {
   cardFoot:{ flex: 1, 
   flexDirection: "row", 
   height: deviceHeight/35 },
+
+  episodesRemaining:{
+      fontSize:14,
+      left:deviceWidth/25
+  },
+
+  listItem:{
+    marginBottom:0,
+    paddingBottom:0,
+    bottom:0
+  },
   
   episodeView:{flex:1,
     flexDirection:'row',
@@ -162,7 +174,7 @@ export default {
     flexDirection:'row',
     alignItems:'center'},
 
-  episodeTitle:{fontSize:15,
+  episodeTitle:{fontSize:12,
     fontWeight:'bold'},
 
   episodeIcon:{fontSize:15},

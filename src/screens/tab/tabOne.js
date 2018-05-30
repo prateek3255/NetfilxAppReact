@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Content,Button } from "native-base";
-import {Image,View,TouchableHighlight,Text} from "react-native";
+import {Image,View,TouchableHighlight,Text,StatusBar} from "react-native";
 import styles from "./styles";
 import BasicTab from "./basicTab";
 
@@ -15,6 +15,7 @@ class TabOne extends Component {
   render() {
     return (
       <Content>
+      <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
             <View>
             <TouchableHighlight onPress={() => this.props.navigation.navigate("DrawerOpen")} underlayColor="white">
             <View>

@@ -26,7 +26,7 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 const HEADER_MAX_HEIGHT = deviceHeight / 2.2;
-const HEADER_MIN_HEIGHT = deviceHeight / 12;
+const HEADER_MIN_HEIGHT = deviceHeight / 10;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 const eps = [
@@ -100,7 +100,8 @@ export default class App extends Component {
         // iOS has negative initial scroll value because content inset...
         Platform.OS === "ios" ? -HEADER_MAX_HEIGHT : 0
       ),
-      refreshing: false
+      refreshing: false,
+      clicked:false
     };
   }
 
@@ -109,9 +110,10 @@ export default class App extends Component {
     return (
       <View style={styles.scrollViewContent}>
         <List
+          listItemPadding={0}
           dataArray={eps}
           renderRow={ep =>
-            <ListItem noBorder button={true} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
+            <ListItem  noBorder button={true} style={styles1.listItem} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
               <View style={styles1.episodeView}>
                 <View style={styles1.episodeWatched} />
 
@@ -260,7 +262,7 @@ export default class App extends Component {
               }
             ]}
           >
-            <Button rounded style={styles1.button} onPress={()=>this.props.navigation.navigate("VideoPlayer")}>
+            <Button rounded style={styles1.button} danger={this.state.clicked} onPress={() => this.setState({ clicked: !this.state.clicked })}>
               <Icon style={styles1.play} name="play" />
             </Button>
           </Animated.View>
@@ -291,7 +293,7 @@ export default class App extends Component {
               >
                 <Icon
                   name="arrow-back"
-                  style={{ color: "white", fontSize: 19 }}
+                  style={{ color: "white", fontSize: 15 }}
                 />
               </Button>
             </View>
@@ -303,10 +305,10 @@ export default class App extends Component {
               }}
             >
               <Button transparent>
-                <Icon name="search" style={{ color: "white", fontSize: 19 }} />
+                <Icon name="search" style={{ color: "white", fontSize: 15 }} />
               </Button>
               <Button transparent>
-                <Icon name="md-more" style={{ color: "white", fontSize: 19 }} />
+                <Icon name="md-more" style={{ color: "white", fontSize: 15 }} />
               </Button>
             </View>
           </View>

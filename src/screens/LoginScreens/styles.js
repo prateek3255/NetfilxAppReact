@@ -11,7 +11,7 @@ export default {
   },
   headerText:{
       color:'black',
-      fontSize:20,
+      fontSize:17,
       fontWeight:'bold'
   },
   header:{
@@ -30,18 +30,18 @@ export default {
       alignItems:'center'
   },
   firstText:{
-        fontSize:25,
+        fontSize:22,
         color:'white',
         fontWeight:'bold',
         paddingBottom:deviceHeight/100
   },
   secondText:{
-    fontSize:20,
+    fontSize:17,
     color:'white',
     paddingBottom:deviceHeight/70
 },
    buttonText:{
-    fontSize:19,
+    fontSize:16,
     color:'white',
     paddingTop:deviceHeight/200,
     paddingLeft:deviceWidth/50,
@@ -80,18 +80,45 @@ export default {
    },
 
    //login
+   headerArrangement:{flex:1,
+    flexDirection:'row',
+    alignItems:'center'},
+    back:{ color: "white", 
+    fontSize: 19 },
    headerLogin:{
        backgroundColor:"black",
    },
    loginHeaderText:{
     color:'white',
-    fontSize:20,
+    fontSize:17,
     fontWeight:'bold'
 },
     login:{
         flex:1,
-        height:deviceHeight,
-        justifyContent:'center'
+        height:(deviceHeight-(deviceHeight/10)),
+        justifyContent:'center',
+        paddingLeft:deviceWidth/15,
+        paddingRight:deviceWidth/15
+    },
+    inputLabel:{
+        color:'white'
+    },
+    input:{
+        color:'white'
+    },
+    loginButton:{
+        marginTop:deviceHeight/30,
+        backgroundColor:'#FF6D2D',
+        width:deviceWidth-(deviceHeight/15),
+        flex:0.07,
+        justifyContent:'center',
+        alignItems:'center',
+    },
+    loginBottomText:{
+        fontSize:17,
+        fontWeight:'600',
+        color:'white',
+        paddingTop:deviceHeight/70
     }
   
   

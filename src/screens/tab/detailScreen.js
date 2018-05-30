@@ -25,7 +25,7 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 const HEADER_MAX_HEIGHT = deviceHeight * (2/3);
-const HEADER_MIN_HEIGHT = deviceHeight / 12;
+const HEADER_MIN_HEIGHT = deviceHeight / 10;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
 export default class App extends Component {
@@ -64,18 +64,17 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
+                
               </Card>
               </TouchableHighlight>
             </View>
@@ -90,18 +89,16 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
-                  <View style={styles1.cardFoot}>
+                <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
               </Card>
               </TouchableHighlight>
             </View>
@@ -116,18 +113,16 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
-                  <View style={styles1.cardFoot}>
+                <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
               </Card>
               </TouchableHighlight>
             </View>
@@ -142,18 +137,16 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
-                  <View style={styles1.cardFoot}>
+                <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
               </Card>
               </TouchableHighlight>
             </View>
@@ -168,18 +161,16 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
-                  <View style={styles1.cardFoot}>
+                <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
               </Card>
               </TouchableHighlight>
             </View>
@@ -194,18 +185,16 @@ export default class App extends Component {
                     <Text style={styles1.cardImageText}>Season 1</Text>
                   </ImageBackground>
                 </CardItem>
-                <CardItem style={styles1.episodeCardItem}>
-                  <View style={styles1.cardFoot}>
+                <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={{ fontSize: 17 }}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent>
-                        <Icon name="md-more" />
+                        <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
                   </View>
-                </CardItem>
               </Card>
               </TouchableHighlight>
             </View>
@@ -397,7 +386,7 @@ export default class App extends Component {
               >
                 <Icon
                   name="arrow-back"
-                  style={{ color: "white", fontSize: 19 }}
+                  style={{ color: "white", fontSize: 15 }}
                 />
               </Button>
             </View>
@@ -409,10 +398,10 @@ export default class App extends Component {
               }}
             >
               <Button transparent>
-                <Icon name="search" style={{ color: "white", fontSize: 19 }} />
+                <Icon name="search" style={{ color: "white", fontSize: 15 }} />
               </Button>
               <Button transparent>
-                <Icon name="md-more" style={{ color: "white", fontSize: 19 }} />
+                <Icon name="md-more" style={{ color: "white", fontSize: 15 }} />
               </Button>
             </View>
           </View>

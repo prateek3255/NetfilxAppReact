@@ -23,6 +23,8 @@ import VideoPlayer from "./screens/tab/video";
 import SideBar from "./screens/sidebar";
 import Register from "./screens/LoginScreens/Register";
 import Login from "./screens/LoginScreens/Login";
+import Setting from "./screens/Settings/setting";
+import Notification from "./screens/Notifications/Notification";
 
 
 
@@ -90,7 +92,9 @@ const AppNavigator = StackNavigator(
 );
 const Drawer = DrawerNavigator(
   {
-    App: { screen: AppNavigator }
+    App: { screen: AppNavigator },
+    Setting: {screen: Setting},
+    Notification: {screen: Notification}
 
   },
   {

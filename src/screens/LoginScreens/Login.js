@@ -17,14 +17,14 @@ class Login extends Component {
         <Container>
         <Header androidStatusBarColor="black" style={styles.headerLogin}>
           <Left>
-          <View style={{flex:1,flexDirection:'row',alignItems:'center'}}>
+          <View style={styles.headerArrangement}>
           <Button
                 transparent
                 onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
                   name="arrow-back"
-                  style={{ color: "white", fontSize: 19 }}
+                  style={styles.back}
                 />
               </Button>
               
@@ -44,15 +44,20 @@ class Login extends Component {
               <View style={styles.login}>  
              <Text style={styles.firstText}>Sign in</Text>
              <Form>
-            <Item floatingLabel>
-              <Label>Username</Label>
-              <Input />
+            <Item floatingLabel last>
+              <Label style={styles.inputLabel}>Username</Label>
+              <Input style={styles.input}/>
             </Item>
             <Item floatingLabel last>
-              <Label>Password</Label>
-              <Input />
+              <Label style={styles.inputLabel}>Password</Label>
+              <Input style={styles.input}/>
             </Item>
-          </Form>   
+            </Form> 
+            <Button style={styles.loginButton} onPress={() => this.props.navigation.navigate("TabHome")}>
+                <Text style={styles.firstText}>Sign in</Text>
+            </Button>
+            <Text style={styles.loginBottomText}>Forgot your email or password?</Text>
+            <Text style={styles.loginBottomText}>New to Netflix? Sign up now.</Text>
              </View>
         </Content>
       </Container>
