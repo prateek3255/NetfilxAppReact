@@ -25,6 +25,9 @@ import Register from "./screens/LoginScreens/Register";
 import Login from "./screens/LoginScreens/Login";
 import Setting from "./screens/Settings/setting";
 import Notification from "./screens/Notifications/Notification";
+import MyList from "./screens/MyList/MyList";
+import Account from "./screens/Account/Account";
+import Users from "./screens/Account/Users";
 
 
 
@@ -84,6 +87,7 @@ const AppNavigator = StackNavigator(
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
     VideoPlayer: {screen:VideoPlayer},
+
     },
   {
     initialRouteName: "Register",
@@ -94,7 +98,10 @@ const Drawer = DrawerNavigator(
   {
     App: { screen: AppNavigator },
     Setting: {screen: Setting},
-    Notification: {screen: Notification}
+    Notification: {screen: Notification},
+    MyList:{screen:MyList},
+    Account:{screen:Account},
+    Users:{screen:Users}
 
   },
   {

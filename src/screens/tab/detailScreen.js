@@ -226,13 +226,13 @@ export default class App extends Component {
       extrapolate: "clamp"
     });
     const viewTranslate = scrollY.interpolate({
-      inputRange: [0, deviceHeight/13,100],
-      outputRange: [0, 150,500],
+      inputRange: [0, HEADER_SCROLL_DISTANCE],
+      outputRange: [0, 550],
       extrapolate: "extend"
     });
     const viewScale = scrollY.interpolate({
-      inputRange: [0, HEADER_SCROLL_DISTANCE / 2, HEADER_SCROLL_DISTANCE],
-      outputRange: [0, 0, 0],
+      inputRange: [0, HEADER_SCROLL_DISTANCE / 2],
+      outputRange: [0, 0.7],
       extrapolate: "clamp"
     });
     const detailTranslate = scrollY.interpolate({
@@ -309,7 +309,6 @@ export default class App extends Component {
               {
                 transform: [
                   { translateY: viewTranslate },
-                  { scale: viewScale }
                 ],
                 zIndex: 6
               }
@@ -323,7 +322,7 @@ export default class App extends Component {
             style={[
               styles1.trailer,
               {
-                transform: [{ translateY: viewTranslate }, { scale: viewScale }]
+                transform: [{ translateY: viewTranslate }]
               }
             ]}
           >

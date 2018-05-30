@@ -35,7 +35,7 @@ export default {
     },
     listItem:{
         backgroundColor:'#221F1F',
-        height:deviceHeight/12
+        height:deviceHeight/10
     },
     listTitle:{
         color:'white',

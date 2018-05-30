@@ -16,13 +16,13 @@ const drawerCover = require("../../../assets/netflix.png");
 const drawerImage = require("../../../assets/logo-kitchen-sink.png");
 const sidebars = [
   {
-    name: "Profile",
-    route: "Profile",
+    name: "Account",
+    route: "Account",
     icon: "md-person",
   },
   {
-    name: "Subscription",
-    route: "Subscription",
+    name: "My List",
+    route: "MyList",
     icon: "md-basket",
   },
   {
