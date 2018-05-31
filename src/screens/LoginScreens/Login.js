@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container,Content,Button,Header,Left, Right,Icon, Form, Item, Input, Label } from "native-base";
-import {Image,View,TouchableHighlight,Text,LinearGradient} from "react-native";
+import {Image,View,TouchableHighlight,Text} from "react-native";
 import styles from "./styles";
 
 

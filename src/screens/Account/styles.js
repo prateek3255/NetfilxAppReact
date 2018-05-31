@@ -68,20 +68,22 @@ export default {
         marginTop:deviceHeight / 30,
         backgroundColor:'white',
         width:deviceWidth*(9/10),
-        height: deviceHeight,
-        marginLeft:deviceWidth*(1/20)
+        marginLeft:deviceWidth*(1/20),
+        marginBottom:deviceHeight / 30,
+        borderColor:'grey',
+        borderWidth:1
     },
     viewTitle:{
         paddingTop:deviceHeight/70,
-        paddingLeft:deviceWidth/7,
-        fontSize:16,
-        fontWeight:'600'
+        paddingLeft:deviceWidth/20,
+        fontSize:18,
+        fontWeight:'bold',
+        color:'black',
     },
     innerView:{
         marginTop:deviceHeight/60,
         marginBottom:deviceHeight/60,
         marginRight:deviceWidth/20,
-        height:deviceHeight-(deviceHeight/4),
         backgroundColor:'white',
         
     },
@@ -102,7 +104,61 @@ export default {
     },
     accountPass:{
         color:'grey'
+    },
+    normalItems:{
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    normalText:{
+        color:'black'
+    },
+    normalIcon:{
+        color:'grey'
+    },
+    cardDetailItem:{
+        flex:1,
+        flexDirection:'row',
+    },
+    buttonItems:{
+        flex:1,
+        justifyContent:'space-between',
+    },
+    buttonItemText:{
+        fontWeight:'bold'
+    },
+    button:{
+      
+        flex:0.5,
+       
+    },
+    normalItems2:{
+        flex:0.5,
+        flexDirection:'row',
+        justifyContent:'space-between',
+    },
+    biggerItem1:{
+        height:deviceHeight/4
+    },
+    biggerItem2:{
+        height:deviceHeight/6
+    },
+    headingFirst:{
+        flex:1,
+        flexDirection:'column',
+        justifyContent:'space-evenly',
+        height:deviceHeight/10
+    },
+    headingTitle:{
+        flex:1
+    },
+    profileImage:{
+        height:deviceHeight/25,
+        width:deviceHeight/25,
+    },
+    lastText:{
+        marginTop:deviceHeight/4,
+        color:'grey'
     }
-  
   
 };
