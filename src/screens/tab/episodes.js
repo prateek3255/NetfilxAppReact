@@ -304,7 +304,7 @@ export default class App extends Component {
                 justifyContent: "space-evenly"
               }}
             >
-              <Button transparent>
+              <Button transparent onPress={() => this.props.navigation.navigate("Search")}>
                 <Icon name="search" style={{ color: "white", fontSize: 15 }} />
               </Button>
               <Button transparent>

@@ -15,7 +15,7 @@ class Login extends Component {
   render() {
     return (
         <Container>
-        <Header androidStatusBarColor="black" style={styles.headerLogin}>
+        <Header androidStatusBarColor="#121212" style={styles.headerLogin}>
           <Left>
           <View style={styles.headerArrangement}>
           <Button
@@ -35,7 +35,7 @@ class Login extends Component {
           </Left>
          
           <Right>
-            <Button transparent>
+            <Button transparent onPress={() => this.props.navigation.navigate("Help")}>
               <Text style={styles.loginHeaderText}>HELP</Text>
             </Button>
           </Right>

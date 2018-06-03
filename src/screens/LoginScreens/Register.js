@@ -26,12 +26,12 @@ class Register extends Component {
             <Button transparent onPress={() => this.props.navigation.navigate("Login")}>
               <Text style={styles.headerText}>LOG IN</Text>
             </Button>
-            <Button transparent>
+            <Button transparent onPress={() => this.props.navigation.navigate("Help")}>
               <Text style={styles.headerText}>HELP</Text>
             </Button>
           </Right>
         </Header>
-        <Content style={styles.content}>
+        <Content style={styles.registerContent}>
             <Image style={styles.contentImage} source={require("../../../assets/RegisterBackground.png")}/>
             <View style={styles.textView}>
                 <Text style={styles.firstText}>See what's next</Text>

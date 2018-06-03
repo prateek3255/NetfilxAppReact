@@ -1,26 +1,52 @@
 import React, { Component } from "react";
-import { Content, Card, CardItem, Text, Body } from "native-base";
+import { Content,Button } from "native-base";
+import {Image,View,TouchableHighlight,Text,StatusBar} from "react-native";
+import styles from "./styles";
 
-export default class TabTwo extends Component {
+class TabTwo extends Component {
   // static navigationOptions={
-  //   title:'Movies'
+  //   title:'Series'
   // }
+
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
-      <Content padder style={{ marginTop: 0 }}>
-        <Card style={{ flex: 0 }}>
-          <CardItem>
-            <Body>
-              <Text>
-                NativeBase builds a layer on top of React Native that provides
-                you with basic set of components for mobile application
-                development. This helps you to build world-class application
-                experiences on native platforms.
-              </Text>
-            </Body>
-          </CardItem>
-        </Card>
+      <Content>
+      <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
+            <View>
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
+            <View>
+              <Image
+               style={styles.image} 
+               source={require("../../../assets/breaking.jpg")}/>
+          </View>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:1,name:'Narcos'})} underlayColor="white">
+            <View>
+              <Image
+               style={styles.image} 
+               source={require("../../../assets/narcos.jpg")}/>
+            </View>
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:2,name:'Stranger Things'})}>
+            <View>
+              <Image
+               style={styles.image} 
+               source={require("../../../assets/stranger.jpg")}/>
+            </View>
+         </TouchableHighlight>
+         <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:3,name:'Game of thrones'})}>
+            <View>
+              <Image
+               style={styles.image} 
+               source={require("../../../assets/thrones.jpg")}/>
+                </View>
+         </TouchableHighlight>
+         </View>
       </Content>
     );
   }
 }
+export default TabTwo;

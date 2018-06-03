@@ -35,7 +35,7 @@ export default {
   },
   play: {
     fontSize: 35,
-    left: deviceWidth/60,
+    left: deviceHeight/70,
     color: "#C14748"
   },
   trailer: {

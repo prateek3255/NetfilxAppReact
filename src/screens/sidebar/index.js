@@ -31,6 +31,11 @@ const sidebars = [
     icon: "md-notifications",
   },
   {
+    name: "My Downloads",
+    route: "Download",
+    icon: "md-download",
+  },
+  {
     name: "Settings",
     route: "Setting",
     icon: "md-settings",

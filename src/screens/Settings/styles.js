@@ -50,6 +50,32 @@ export default {
     },
     alignSwitch:{
         marginTop:deviceHeight/40
+    },
+    biggerListItem:{
+        backgroundColor:'#221F1F',
+        height:deviceHeight/8
+    },
+    biggerBody:{
+        height:deviceHeight/9
+    },
+    modalView:{
+        backgroundColor:"black",
+        marginTop:deviceHeight/3,
+        marginLeft:deviceWidth/10,
+        marginRight:deviceWidth/10
+    },
+    innerModalView:{
+        marginTop:deviceHeight/60,
+        marginBottom:deviceHeight/60,
+        marginLeft:deviceWidth/15,
+        marginRight:deviceWidth/15
+
+    },
+    modalCancel:{
+        textAlign:'right',
+        color:'green',
+        marginTop:deviceHeight/60,
+        fontWeight:'500'
     }
   
   

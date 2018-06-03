@@ -13,7 +13,7 @@ import {
   Left,
   Body,
 } from "native-base";
-import {View, StatusBar} from "react-native";
+import {View, StatusBar, YellowBox} from "react-native";
 import BasicTab from "./screens/tab/basicTab";
 import TabOne from "./screens/tab/tabOne";
 import TabTwo from "./screens/tab/tabTwo";
@@ -28,8 +28,11 @@ import Notification from "./screens/Notifications/Notification";
 import MyList from "./screens/MyList/MyList";
 import Account from "./screens/Account/Account";
 import Users from "./screens/Account/Users";
+import Search from "./screens/search/Search";
+import Help from "./screens/Help/Help";
+import Download from "./screens/Downloads/download";
 
-
+YellowBox.ignoreWarnings(["Warning: isMounted( ... ) is deprecated"]);
 
 const TabHome = TabNavigator({
   Series:{screen:TabOne,navigationOptions: {  tabBarLabel: 'Series'  }},
@@ -51,7 +54,7 @@ const TabHome = TabNavigator({
     ),
     headerRight:(
       <View style={{flex:1,flexDirection:'row'}}>
-      <Button transparent>
+      <Button transparent onPress={() => navigation.navigate("Search")}>
               <Icon name="search" style={{color:'white'}}/>
             </Button>
             <Button transparent>
@@ -83,10 +86,16 @@ const AppNavigator = StackNavigator(
     // Drawer: { screen: Drawer },
     Register:{screen:Register},
     Login:{screen:Login},
+    Help:{screen:Help},
     TabHome: { screen: TabHome},
+    Search: {screen: Search},
+    MyList:{screen:MyList},
+    Notification: {screen: Notification},
+    Download:{screen:Download},
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
     VideoPlayer: {screen:VideoPlayer},
+    Users:{screen:Users}
 
     },
   {
@@ -101,7 +110,8 @@ const Drawer = DrawerNavigator(
     Notification: {screen: Notification},
     MyList:{screen:MyList},
     Account:{screen:Account},
-    Users:{screen:Users}
+    Download:{screen:Download}
+    
 
   },
   {

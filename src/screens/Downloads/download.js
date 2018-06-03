@@ -4,53 +4,23 @@ import {Image,View,TouchableHighlight,Text} from "react-native";
 import styles from "./styles";
 
 const datas=[
-    {title:'New Arrival',
-     head:'Breaking Bad Season 1',
+    {
+     head:'Breaking Bad S01E01',
      date:'May 30',
      img:require('../../../assets/breaking.jpg')   
     },
-    {title:'New Arrival',
-     head:'Breaking Bad Season 2',
+    {
+     head:'Breaking Bad S02E02',
      date:'May 30',
      img:require('../../../assets/breakingS02.jpg')   
     },
-    {title:'New Arrival',
-     head:'Breaking Bad Season 3',
+    {
+     head:'Breaking Bad S03E03',
      date:'May 30',
      img:require('../../../assets/breakingS03.jpg')   
     },
-    {title:'New Arrival',
-     head:'Breaking Bad Season 4',
-     date:'May 30',
-     img:require('../../../assets/breakingS04.jpg')   
-    },
-    {title:'New Arrival',
-     head:'Breaking Bad Season 5',
-     date:'May 30',
-     img:require('../../../assets/breakingS01.jpg')   
-    },
-    {title:'New Arrival',
-     head:'Narcos Season 1',
-     date:'May 30',
-     img:require('../../../assets/narcosS01.jpg')   
-    },
-    {title:'New Arrival',
-     head:'Narcos Season 2',
-     date:'May 30',
-     img:require('../../../assets/narcosS02.jpg')   
-    },
-    {title:'New Arrival',
-     head:'Game of thrones Season 1',
-     date:'May 30',
-     img:require('../../../assets/thronesS01.jpg')   
-    },
-    {title:'New Arrival',
-     head:'Game of thrones Season 2',
-     date:'May 30',
-     img:require('../../../assets/thrones.jpg')   
-    },
 ]
-class Notification extends Component {
+class Download extends Component {
   static navigationOptions={
     header:null
   }
@@ -75,7 +45,7 @@ class Notification extends Component {
           </Left>
          
           <Body>
-            <Title style={styles.headerTitle}>Notificaiton</Title>
+            <Title style={styles.headerTitle}>My Downloads</Title>
           </Body>
         </Header>
         <Content style={styles.content}>
@@ -83,7 +53,7 @@ class Notification extends Component {
             listBorderColor="#1A1A1A"
             listItemPadding={5}
             dataArray={datas}
-            renderRow={data=><ListItem style={styles.listItem} onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
+            renderRow={data=><ListItem style={styles.listItem} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
             <View style={styles.imageView}>
             <Image
             style={styles.image}
@@ -91,7 +61,6 @@ class Notification extends Component {
             </View>
             <View style={styles.pad}/>
             <View style={styles.allText}>
-            <Text style={styles.title}>{data.title}</Text>
             <Text style={styles.head}>{data.head}</Text>
             <Text style={styles.date}>{data.date}</Text>
             </View>
@@ -103,4 +72,4 @@ class Notification extends Component {
     );
   }
 }
-export default Notification;
+export default Download;

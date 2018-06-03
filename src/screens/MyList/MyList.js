@@ -24,19 +24,7 @@ const datas=[
     },
 ]
 
-const Images=(props)=>{    
-  return( 
- 
-    datas.map((e,i)=>{
-      return <Image
-      source={e.img}
-      style={styles.images}
-      key={i}/>   
-    })
 
-  )
-  
-}
 
 class MyList extends Component {
   static navigationOptions={
@@ -46,6 +34,7 @@ class MyList extends Component {
   constructor(props){
     super(props);
   }
+   
   render() {
     return (
         <Container>
@@ -68,25 +57,16 @@ class MyList extends Component {
         </Header>
         <Content style={styles.content}>
             <View style={styles.listView}>
-            {/* <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/>
-               <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/>
-               <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/>
-               <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/>
-               <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/>
-               <Image
-              source={require('../../../assets/breaking.jpg')}
-              style={styles.images}/> */}
-              <Images/>
+            
+              {datas.map((e,i)=>{
+          return (
+            <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
+          <Image
+          source={e.img}
+          style={styles.images}
+          key={i}/>
+          </TouchableHighlight> )   
+        })}
             </View>
             
         

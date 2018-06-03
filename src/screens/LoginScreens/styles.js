@@ -9,6 +9,9 @@ export default {
       height:deviceHeight/15,
       width:deviceWidth/6,
   },
+  registerContent:{
+      backgroundColor:'black'
+  },
   headerText:{
       color:'black',
       fontSize:17,
@@ -18,7 +21,7 @@ export default {
       backgroundColor:'white'
   },
   content:{
-      backgroundColor:'black'
+      backgroundColor:'#1A1A1A'
   },
   contentImage:{
       height:deviceHeight/1.5,
@@ -86,7 +89,7 @@ export default {
     back:{ color: "white", 
     fontSize: 19 },
    headerLogin:{
-       backgroundColor:"black",
+       backgroundColor:"#121212",
    },
    loginHeaderText:{
     color:'white',
