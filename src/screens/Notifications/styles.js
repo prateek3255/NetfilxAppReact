@@ -16,7 +16,7 @@ export default {
     headerTitle:{
         color:'white',
         fontSize:17,
-        fontWeight:'bold'
+        fontWeight:'bold',
     },
     content:{
         backgroundColor:'#1A1A1A'

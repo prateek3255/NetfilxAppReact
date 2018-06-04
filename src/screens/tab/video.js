@@ -7,8 +7,11 @@ import React, {
     Text,
     TouchableOpacity,
     View,
-    StatusBar
+    StatusBar,
+    ActivityIndicator,
   } from 'react-native';
+
+  import {Icon, Button} from 'native-base';
   
   import Video from 'react-native-video';
   
@@ -25,12 +28,16 @@ import React, {
       duration: 0.0,
       currentTime: 0.0,
       paused: false,
+      loader:true,
+      showIcon:false,
+      icon:"ios-pause"
     };
   
     video;
   
     onLoad = (data) => {
       this.setState({ duration: data.duration });
+      this.setState({loader:false})
       
     };
   
@@ -57,6 +64,49 @@ import React, {
       }
       return 0;
     };
+
+    touchablePress=()=>{
+        // this.setState({
+        //   showIcon:!this.state.showIcon
+        // } )
+        // setTimeout(()=>{
+        //   this.setState({
+        //     showIcon:!this.state.showIcon
+        //   } )
+        // },2500 )
+        if(!this.state.showIcon){
+          this.setState({
+            showIcon:true
+          },()=>{
+            setTimeout(()=>{
+          this.setState({
+            showIcon:false
+          } )
+        },2500 )
+          })
+        }
+        else{
+          this.setState({
+            showIcon:false
+          })
+        }
+    }
+
+    toggle=()=>{
+      this.setState({
+        paused:!this.state.paused,
+      } )
+      if (this.state.icon === "ios-play"){
+        this.setState({
+          icon:"ios-pause"
+        } )
+      }
+      else {
+        this.setState({
+          icon:"ios-play"
+        } )
+      }
+    }
   
   
     render() {
@@ -70,13 +120,12 @@ import React, {
         />
           <TouchableOpacity
             style={styles.fullScreen}
-            onPress={() => this.setState({ paused: !this.state.paused })}
+            onPress={this.touchablePress}
           >
             <Video
               ref={(ref) => { this.video = ref }}
               /* For ExoPlayer */
-              /* source={{ uri: 'http://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0', type: 'mpd' }} */
-              source={require('../../../assets/OP6.mp4')}
+               source={{ uri: 'https://pixabay.com/en/videos/download/video-14815_medium.mp4', type: 'mp4' }} 
               style={styles.fullScreen}
               rate={this.state.rate}
               paused={this.state.paused}
@@ -90,9 +139,28 @@ import React, {
               onAudioFocusChanged={this.onAudioFocusChanged}
               repeat={true}
             />
-          </TouchableOpacity>
-  
-          <View style={styles.controls}>
+         </TouchableOpacity> 
+          <View>
+        
+            {this.state.loader && (
+              <ActivityIndicator
+                style={{ height: 80 }}
+                color="#C00"
+                size="large"
+              />
+            )}
+            
+            {!this.state.loader && this.state.showIcon && (
+              <Button transparent onPress={this.toggle}>
+              <Icon name={this.state.icon} style={{color:'white', fontSize:50}}  />
+              </Button>
+            )}
+
+           
+          </View>
+         
+         { !this.state.loader &&  this.state.showIcon &&
+          (<View style={styles.controls}>
 
   
             <View style={styles.trackingControls}>
@@ -101,7 +169,8 @@ import React, {
                 <View style={[styles.innerProgressRemaining, { flex: flexRemaining }]} />
               </View>
             </View>
-          </View>
+          </View>)
+         }
         </View>
       );
     }

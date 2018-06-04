@@ -113,7 +113,7 @@ export default class App extends Component {
           listItemPadding={0}
           dataArray={eps}
           renderRow={ep =>
-            <ListItem  noBorder button={true} style={styles1.listItem} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
+            <ListItem first  button={true} style={styles1.listItem} onPress={() => this.props.navigation.navigate("VideoPlayer")}>
               <View style={styles1.episodeView}>
                 <View style={styles1.episodeWatched} />
 
@@ -360,7 +360,8 @@ const styles = StyleSheet.create({
   },
   scrollViewContent: {
     // iOS uses content inset, which acts like padding.
-    paddingTop: Platform.OS !== "ios" ? HEADER_MAX_HEIGHT : 0
+    paddingTop: Platform.OS !== "ios" ? HEADER_MAX_HEIGHT : 0,
+    marginBottom:deviceHeight/25
   },
   row: {
     height: 40,

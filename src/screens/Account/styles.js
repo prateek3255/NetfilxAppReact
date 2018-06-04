@@ -52,7 +52,7 @@ export default {
         backgroundColor:'#f3f3f3',
     },
     image:{
-        height:deviceHeight/12,
+        height:deviceHeight/25,
         width:deviceWidth/4,
     },
     accountImage:{

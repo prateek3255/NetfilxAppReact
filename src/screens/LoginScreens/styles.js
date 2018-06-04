@@ -6,7 +6,7 @@ const deviceWidth = Dimensions.get('window').width;
 
 export default {
   image:{
-      height:deviceHeight/15,
+      height:deviceHeight/40,
       width:deviceWidth/6,
   },
   registerContent:{
@@ -90,6 +90,9 @@ export default {
     fontSize: 19 },
    headerLogin:{
        backgroundColor:"#121212",
+   },
+   empty:{
+       flex:2
    },
    loginHeaderText:{
     color:'white',

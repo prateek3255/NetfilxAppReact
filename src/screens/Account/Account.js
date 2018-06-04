@@ -41,7 +41,7 @@ class Account extends Component {
           <TouchableHighlight onPress={()=>this.props.navigation.navigate("Users")}>
             <Image
               style={styles.accountImage}
-              source={require("../../../assets/profile.jpg")}
+              source={require("../../../assets/profile.png")}
             />
             </TouchableHighlight>
           </Right>
@@ -210,7 +210,7 @@ class Account extends Component {
                     <View style={styles.cardDetailItem}>
                     <Image
                       style={styles.profileImage}
-                      source={require("../../../assets/profile.jpg")}
+                      source={require("../../../assets/profile.png")}
                     />
                     <Text style={styles.normalText}>{'   '}XYZ</Text>
                   </View>
@@ -250,7 +250,6 @@ class Account extends Component {
             </View>
           </View>
 
-          <Text style={styles.lastText}>Questions? Contact Us.</Text>
 
         </Content>
       </Container>

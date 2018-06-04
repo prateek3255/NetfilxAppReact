@@ -27,7 +27,7 @@ class Login extends Component {
                   style={styles.back}
                 />
               </Button>
-              
+              <View style={styles.empty}/>
           <Image
             style={styles.image} 
             source={require("../../../assets/netflixHeader.png")}/>

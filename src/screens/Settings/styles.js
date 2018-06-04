@@ -58,11 +58,18 @@ export default {
     biggerBody:{
         height:deviceHeight/9
     },
+    modalBackground:{
+        flex: 1,
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent:'center',
+        backgroundColor: '#00000090'
+    },
     modalView:{
-        backgroundColor:"black",
-        marginTop:deviceHeight/3,
-        marginLeft:deviceWidth/10,
-        marginRight:deviceWidth/10
+        backgroundColor:"#222325",
+        width:deviceWidth*(4/5),
+        height:deviceHeight/3.7,
+        justifyContent:'center'
     },
     innerModalView:{
         marginTop:deviceHeight/60,
@@ -75,7 +82,22 @@ export default {
         textAlign:'right',
         color:'green',
         marginTop:deviceHeight/60,
-        fontWeight:'500'
+        fontWeight:'500',
+        marginRight:deviceWidth/10
+    },
+    modalTitle:{
+        fontWeight:'bold',
+        color:'white',
+        marginBottom:deviceHeight/60,
+        marginLeft:deviceWidth/18
+    },
+    modalListTitle:{
+        fontWeight:'300',
+        color:'white'
+    },
+    modalListSubTitle:{
+        fontWeight:'normal',
+        color:'white'
     }
   
   

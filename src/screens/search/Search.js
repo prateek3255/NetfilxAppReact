@@ -44,7 +44,7 @@ class Search extends Component {
           <Body>
           <Item style={styles.searchBox}>
             <Icon name="ios-search"  style={styles.back}/>
-            <Input placeholder="Search"  style={styles.input}/>
+            <Input placeholder="Search"  style={styles.input} autoFocus returnKeyType="search"/>
             <Icon name="ios-mic"  style={styles.back}/>
           </Item>
           </Body>

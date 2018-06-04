@@ -84,8 +84,12 @@ const TabHome = TabNavigator({
 const AppNavigator = StackNavigator(
   {
     // Drawer: { screen: Drawer },
-    Register:{screen:Register},
-    Login:{screen:Login},
+    Register:{screen:Register, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
+    Login:{screen:Login, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
     Help:{screen:Help},
     TabHome: { screen: TabHome},
     Search: {screen: Search},
@@ -95,6 +99,7 @@ const AppNavigator = StackNavigator(
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
     VideoPlayer: {screen:VideoPlayer},
+    Account:{screen:Account},
     Users:{screen:Users}
 
     },

@@ -35,7 +35,7 @@ export default {
   },
   play: {
     fontSize: 35,
-    left: deviceHeight/70,
+    left: deviceHeight/90,
     color: "#C14748"
   },
   trailer: {
@@ -162,20 +162,26 @@ export default {
   
   episodeView:{flex:1,
     flexDirection:'row',
-    height:deviceHeight/22},
+    height:deviceHeight/15},
 
   episodeWatched:{flex:0.01,
-    height:deviceHeight/22,
+    height:deviceHeight/15,
     backgroundColor:'orange'},
 
   episodeDetailView:{flex:0.9} ,
 
   episodeNameView:{flex:0.5,
     flexDirection:'row',
-    alignItems:'center'},
+    alignItems:'center',
+    },
 
   episodeTitle:{fontSize:12,
-    fontWeight:'bold'},
+    fontWeight:'bold',
+    
+  },
+  episodeList:{
+    marginBottom:deviceHeight/10
+  },
 
   episodeIcon:{fontSize:15},
 

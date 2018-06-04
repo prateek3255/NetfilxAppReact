@@ -15,8 +15,9 @@ class Setting extends Component {
       notifications:false,
       download:false,
       wifi:false,
-      cellular:false,
-      storage:false
+      downloadQuality:false,
+      storage:false,
+      cellular:false
     }
   }
   toggleNotificaiton=()=>{
@@ -34,11 +35,14 @@ class Setting extends Component {
       wifi:!this.state.wifi
     });
   }
-  setCellularVisible(visible) {
-    this.setState({cellular: visible});
+  setDownloadVisible(visible) {
+    this.setState({downloadQuality: visible});
   }
   setStorageVisible(visible) {
     this.setState({storage: visible});
+  }
+  setCellularVisible(visible) {
+    this.setState({cellular: visible});
   }
   render() {
     return (
@@ -55,10 +59,11 @@ class Setting extends Component {
                 />
               </Button>
           </Left>
-         
+       
           <Body>
             <Title style={styles.headerTitle}>App Settings</Title>
           </Body>
+          <Right/>
         </Header>
         <Content style={styles.content}>
         <Separator style={styles.separator}>
@@ -75,41 +80,42 @@ class Setting extends Component {
           </ListItem>
 
           <Modal
-          animationType="slide"
+          animationType="none"
           transparent={true}
           visible={this.state.cellular}
           onRequestClose={()=>{
             this.props.navigation.goBack()
           }}
          >
+         <View style={styles.modalBackground}>
           <View style={styles.modalView}>
-            <View style={styles.innerModalView}>
-              <Text style={styles.listTitle}>Download Video Quality</Text>
+            
+              <Text style={styles.modalTitle}>Cellular Data Usage</Text>
               <List>
                 <ListItem last icon>
                 <Left>
-                    <Radio selected={true} />
+                    <Radio selected={true}  color="white" selectedColor="#C14748"/>
                   </Left>
                   <Body >
-                    <Text style={styles.listTitle}>Standard</Text>
-                    <Text style={styles.listSubTitle}>Faster downlaod and less storage</Text>
+                    <Text style={styles.modalListTitle}>Wifi only</Text>
                   </Body>
                 </ListItem>
                 <ListItem last icon>
                 <Left>
-                    <Radio selected={false} />
+                    <Radio selected={false} color="white" selectedColor="#C14748"/>
                   </Left>
                   <Body >
-                    <Text style={styles.listTitle}>High</Text>
-                    <Text style={styles.listSubTitle}>Uses More Storage</Text>
+                    <Text style={styles.modalListTitle}>Save data</Text>
                   </Body>
                 </ListItem>
               </List>
               <Text style={styles.modalCancel} onPress={()=>{this.setCellularVisible(false)}}>Cancel</Text>
-            </View>
+          
           </View>
+        </View>
         </Modal>
 
+          
           <Separator style={styles.separator}>
             <Text style={styles.separatorText}>Notifications</Text>
           </Separator>
@@ -165,7 +171,7 @@ class Setting extends Component {
                  tintColor="black"/>
               </Right>
           </ListItem>
-          <ListItem last style={styles.listItem} icon>
+          <ListItem last style={styles.listItem} icon onPress={()=>{this.setDownloadVisible(true)}}>
               <Left>
                 <Icon  type="Foundation"  name="monitor" style={styles.listIcon} />
               </Left>
@@ -184,42 +190,81 @@ class Setting extends Component {
               </Body>
           </ListItem>
 
+          <Modal
+          animationType="none"
+          transparent={true}
+          visible={this.state.downloadQuality}
+          onRequestClose={()=>{
+            this.props.navigation.goBack()
+          }}
+         >
+         <View style={styles.modalBackground}>
+          <View style={styles.modalView}>
+            
+              <Text style={styles.modalTitle}>Download Video Quality</Text>
+              <List>
+                <ListItem last icon>
+                <Left>
+                    <Radio selected={true}  color="white" selectedColor="#C14748"/>
+                  </Left>
+                  <Body >
+                    <Text style={styles.modalListTitle}>Standard</Text>
+                    <Text style={styles.modalListSubTitle}>Faster download. Less Storage</Text>
+                  </Body>
+                </ListItem>
+                <ListItem last icon>
+                <Left>
+                    <Radio selected={false} color="white" selectedColor="#C14748"/>
+                  </Left>
+                  <Body >
+                    <Text style={styles.modalListTitle}>High</Text>
+                    <Text style={styles.modalListSubTitle}>More Storage</Text>
+                  </Body>
+                </ListItem>
+              </List>
+              <Text style={styles.modalCancel} onPress={()=>{this.setDownloadVisible(false)}}>Cancel</Text>
+          
+          </View>
+        </View>
+        </Modal>
 
 
            <Modal
-          animationType="slide"
+          animationType="none"
           transparent={true}
           visible={this.state.storage}
           onRequestClose={()=>{
             this.props.navigation.goBack()
           }}
          >
+         <View style={styles.modalBackground}>
           <View style={styles.modalView}>
-            <View style={styles.innerModalView}>
-              <Text style={styles.listTitle}>Download Location</Text>
+            
+              <Text style={styles.modalTitle}>Download Location</Text>
               <List>
                 <ListItem last icon>
                 <Left>
-                    <Radio selected={true} />
+                    <Radio selected={true}  color="white" selectedColor="#C14748"/>
                   </Left>
                   <Body >
-                    <Text style={styles.listTitle}>Internal Storage</Text>
-                    <Text style={styles.listSubTitle}>558 MB free</Text>
+                    <Text style={styles.modalListTitle}>Internal Storage</Text>
+                    <Text style={styles.modalListSubTitle}>558 MB free</Text>
                   </Body>
                 </ListItem>
                 <ListItem last icon>
                 <Left>
-                    <Radio selected={false} />
+                    <Radio selected={false} color="white" selectedColor="#C14748"/>
                   </Left>
                   <Body >
-                    <Text style={styles.listTitle}>SD Card</Text>
-                    <Text style={styles.listSubTitle}>1 GB free</Text>
+                    <Text style={styles.modalListTitle}>SD Card</Text>
+                    <Text style={styles.modalListSubTitle}>1 GB free</Text>
                   </Body>
                 </ListItem>
               </List>
               <Text style={styles.modalCancel} onPress={()=>{this.setStorageVisible(false)}}>Cancel</Text>
-            </View>
+          
           </View>
+        </View>
         </Modal>
 
 

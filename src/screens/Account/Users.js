@@ -55,7 +55,7 @@ class Users extends Component {
                 <View style={styles.card}>
                     <Image
                     style={styles.cardImage}
-                    source={require("../../../assets/profile.jpg")}/>
+                    source={require("../../../assets/profile.png")}/>
                     <View style={{flex:1,flexDirection:'row',justifyContent:'center'}}>
                     <Text style={{color:'white'}}>Yogesh</Text>
                     </View>
@@ -63,7 +63,7 @@ class Users extends Component {
                 <View style={styles.card}>
                     <Image
                     style={styles.cardImage}
-                    source={require("../../../assets/profile.jpg")}/>
+                    source={require("../../../assets/profile.png")}/>
                     <View style={{flex:1,flexDirection:'row',justifyContent:'center'}}>
                     <Text style={{color:'white'}}>Yogesh</Text>
                     </View>
@@ -71,7 +71,7 @@ class Users extends Component {
                 <View style={styles.card}>
                     <Image
                     style={styles.cardImage}
-                    source={require("../../../assets/profile.jpg")}/>
+                    source={require("../../../assets/profile.png")}/>
                     <View style={{flex:1,flexDirection:'row',justifyContent:'center'}}>
                     <Text style={{color:'white'}}>Yogesh</Text>
                     </View>
@@ -79,7 +79,7 @@ class Users extends Component {
                 <View style={styles.card}>
                     <Image
                     style={styles.cardImage}
-                    source={require("../../../assets/profile.jpg")}/>
+                    source={require("../../../assets/profile.png")}/>
                     <View style={{flex:1,flexDirection:'row',justifyContent:'center'}}>
                     <Text style={{color:'white'}}>Yogesh</Text>
                     </View>

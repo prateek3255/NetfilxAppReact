@@ -32,7 +32,7 @@ class Register extends Component {
           </Right>
         </Header>
         <Content style={styles.registerContent}>
-            <Image style={styles.contentImage} source={require("../../../assets/RegisterBackground.png")}/>
+            <Image style={styles.contentImage} source={require("../../../assets/RegisterBackground.jpg")}/>
             <View style={styles.textView}>
                 <Text style={styles.firstText}>See what's next</Text>
                 <Text style={styles.secondText}>Watch anywhere. Cancel at Any Time</Text>

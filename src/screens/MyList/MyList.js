@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container,Content,Button,Header,Left, Body,Title,Icon } from "native-base";
+import { Container,Content,Button,Header,Left, Body,Title,Icon, Right } from "native-base";
 import {Image,View,TouchableHighlight} from "react-native";
 import styles from "./styles";
 
@@ -54,6 +54,7 @@ class MyList extends Component {
           <Body>
             <Title style={styles.headerTitle}>My List</Title>
           </Body>
+          <Right/>
         </Header>
         <Content style={styles.content}>
             <View style={styles.listView}>

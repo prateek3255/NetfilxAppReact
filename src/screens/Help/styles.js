@@ -42,8 +42,9 @@ export default {
     },
 
     image:{
-        height:deviceHeight/15,
+        height:deviceHeight/40,
         width:deviceWidth/6,
+        marginTop:deviceHeight/40
     },
 
     empty:{

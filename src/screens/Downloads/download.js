@@ -47,6 +47,7 @@ class Download extends Component {
           <Body>
             <Title style={styles.headerTitle}>My Downloads</Title>
           </Body>
+          <Right/>
         </Header>
         <Content style={styles.content}>
             <List noBorder

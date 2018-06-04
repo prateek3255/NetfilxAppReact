@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Content,Button } from "native-base";
-import {Image,View,TouchableHighlight,Text,StatusBar} from "react-native";
+import {Image,View,TouchableHighlight,Text,StatusBar,ActivityIndicator} from "react-native";
 import styles from "./styles";
 
 class TabTwo extends Component {
@@ -10,11 +10,28 @@ class TabTwo extends Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      notLoaded:true
+    }
+  }
+
+  componentDidMount(){
+    this.setState({notLoaded:false});
   }
   render() {
     return (
       <Content>
       <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
+      <View>
+        
+            {this.state.notLoaded && (
+              <ActivityIndicator
+                style={{ height: 80 }}
+                color="#C00"
+                size="large"
+              />
+            )}
+          </View>
             <View>
             <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
             <View>

@@ -62,21 +62,22 @@ class Notification extends Component {
     return (
         <Container>
         <Header androidStatusBarColor="#121212" style={styles.header}>
-          <Left>
+        <Left>
           <Button
                 transparent
                 onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
-                  name="arrow-back"
+                  name="md-arrow-back"
                   style={styles.back}
                 />
               </Button>
-          </Left>
-         
-          <Body>
+              </Left>
+          <Body  style={{flex:1}}>
             <Title style={styles.headerTitle}>Notificaiton</Title>
           </Body>
+
+          <Right/>
         </Header>
         <Content style={styles.content}>
             <List noBorder
