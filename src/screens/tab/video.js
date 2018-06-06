@@ -138,6 +138,7 @@ import React, {
               onAudioBecomingNoisy={this.onAudioBecomingNoisy}
               onAudioFocusChanged={this.onAudioFocusChanged}
               repeat={true}
+              controls={true}
             />
          </TouchableOpacity> 
           <View>

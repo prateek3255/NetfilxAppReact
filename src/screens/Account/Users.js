@@ -18,7 +18,7 @@ class Users extends Component {
           <Left>
           <Button
                 transparent
-                onPress={() => this.props.navigation.navigate("Account")}
+                onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
                   name="arrow-back"
@@ -36,7 +36,7 @@ class Users extends Component {
           <Right>
           <Button
                 transparent
-                onPress={() => this.props.navigation.navigate("Account")}
+                onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
                   type="MaterialCommunityIcons"  

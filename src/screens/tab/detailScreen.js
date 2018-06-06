@@ -17,7 +17,8 @@ import {
   Card,
   CardItem,
   List,
-  ListItem
+  ListItem,
+  ActionSheet
 } from "native-base";
 import styles1 from "./styles";
 
@@ -27,6 +28,33 @@ const deviceWidth = Dimensions.get("window").width;
 const HEADER_MAX_HEIGHT = deviceHeight * (2/3);
 const HEADER_MIN_HEIGHT = deviceHeight / 10;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
+
+const SEASONS_BUTTONS =["Download","View Details","Cancel"]
+const SCREEN_BUTTONS=["Add to your list","View Series Details","Cancel"]
+const CANCEL_INDEX = 2
+
+const datas=[
+  {season:1,
+  episodes:"7/13",
+img:require("../../../assets/narcosS02.jpg")},
+  {season:2,
+    episodes:"7/13",
+    img:require("../../../assets/narcosS01.jpg")},
+    {season:3,
+      episodes:"7/13",
+      img:require("../../../assets/breakingS01.jpg")},
+      {season:4,
+        episodes:"7/13",
+        img:require("../../../assets/breakingS02.jpg")},
+        {season:5,
+          episodes:"7/13",
+          img:require("../../../assets/breakingS03.jpg")},
+          {season:6,
+            episodes:"7/13",
+            img:require("../../../assets/thronesS01.jpg")}
+]
+
+
 
 export default class App extends Component {
   static navigationOptions = {
@@ -50,26 +78,42 @@ export default class App extends Component {
     ];
   }
 
+  showActionSheet(BUTTONS,head){
+    return(ActionSheet.show(
+      {
+        options: BUTTONS,
+        cancelButtonIndex: CANCEL_INDEX,
+        title: head
+      },
+      buttonIndex => {
+        this.setState({ clicked: BUTTONS[buttonIndex] });
+      }))
+ }
+
+ 
+
   _renderScrollViewContent() {
     return (
       <View style={[styles.scrollViewContent,styles1.scroll]}>
-        <View>
+            {datas.map((e,i)=>{
+              return(
+                <View key={i}>
             <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles1.seasonCard}>
                 <CardItem cardBody>
                   <ImageBackground
-                    source={require("../../../assets/narcosS02.jpg")}
+                    source={e.img}
                     style={styles1.cardImage}
                   >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
+            <Text style={styles1.cardImageText}>Season {e.season}</Text>
                   </ImageBackground>
                 </CardItem>
                   <View style={styles1.cardFoot}>
                     <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
+                      <Text style={styles1.episodesRemaining}>{e.episodes}{' '}Episodes</Text>
                     </View>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
+                      <Button transparent onPress={()=>this.showActionSheet(SEASONS_BUTTONS,"Season Options")}>
                         <Icon name="md-more" style={{fontSize:15}}/>
                       </Button>
                     </View>
@@ -78,126 +122,10 @@ export default class App extends Component {
               </Card>
               </TouchableHighlight>
             </View>
-            <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
-                  </ImageBackground>
-                </CardItem>
-                <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
-                    </View>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
-                        <Icon name="md-more" style={{fontSize:15}}/>
-                      </Button>
-                    </View>
-                  </View>
-              </Card>
-              </TouchableHighlight>
-            </View>
-            <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS02.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
-                  </ImageBackground>
-                </CardItem>
-                <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
-                    </View>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
-                        <Icon name="md-more" style={{fontSize:15}}/>
-                      </Button>
-                    </View>
-                  </View>
-              </Card>
-              </TouchableHighlight>
-            </View>
-            <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
-                  </ImageBackground>
-                </CardItem>
-                <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
-                    </View>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
-                        <Icon name="md-more" style={{fontSize:15}}/>
-                      </Button>
-                    </View>
-                  </View>
-              </Card>
-              </TouchableHighlight>
-            </View>
-            <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS02.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
-                  </ImageBackground>
-                </CardItem>
-                <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
-                    </View>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
-                        <Icon name="md-more" style={{fontSize:15}}/>
-                      </Button>
-                    </View>
-                  </View>
-              </Card>
-              </TouchableHighlight>
-            </View>
-            <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
-              <Card style={styles1.seasonCard}>
-                <CardItem cardBody>
-                  <ImageBackground
-                    source={require("../../../assets/narcosS01.jpg")}
-                    style={styles1.cardImage}
-                  >
-                    <Text style={styles1.cardImageText}>Season 1</Text>
-                  </ImageBackground>
-                </CardItem>
-                <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
-                      <Text style={styles1.episodesRemaining}>7/13 episodes</Text>
-                    </View>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
-                      <Button transparent>
-                        <Icon name="md-more" style={{fontSize:15}}/>
-                      </Button>
-                    </View>
-                  </View>
-              </Card>
-              </TouchableHighlight>
-            </View>
+              )
+            })}
+
+           
       </View>
     );
   }
@@ -250,6 +178,10 @@ export default class App extends Component {
       outputRange: [0, 0, -4],
       extrapolate: "clamp"
     });
+    const textOpacity=scrollY.interpolate({
+      inputRange: [0, HEADER_SCROLL_DISTANCE],
+      outputRange: [0, 1],
+    })
 
     return (
       <View style={styles.fill}>
@@ -377,30 +309,28 @@ export default class App extends Component {
             }
           ]}
         >
-          <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
-            <View style={{ flex: 0.8 }}>
+          <View style={styles1.headerView}>
+            <View style={styles1.headerBeginView}>
               <Button
                 transparent
                 onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
                   name="arrow-back"
-                  style={{ color: "white", fontSize: 15 }}
+                  style={styles1.headerIcon}
                 />
               </Button>
+              <Button transparent><Animated.Text style={[styles1.headerText,{opacity:textOpacity}]}>{this.props.navigation.state.params.name}</Animated.Text></Button>
             </View>
             <View
-              style={{
-                flex: 0.2,
-                flexDirection: "row",
-                justifyContent: "space-evenly"
-              }}
+              style={styles1.headerEndView}
             >
+            
               <Button transparent onPress={() => this.props.navigation.navigate("Search")}>
-                <Icon name="search" style={{ color: "white", fontSize: 15 }} />
+                <Icon name="search" style={styles1.headerIcon} />
               </Button>
-              <Button transparent>
-                <Icon name="md-more" style={{ color: "white", fontSize: 15 }} />
+              <Button transparent onPress={()=>this.showActionSheet(SCREEN_BUTTONS,"Options")}>
+                <Icon name="md-more" style={styles1.headerIcon} />
               </Button>
             </View>
           </View>

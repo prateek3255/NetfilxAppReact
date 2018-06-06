@@ -14,7 +14,8 @@ export default {
   },
   image: {
     width: deviceWidth,
-    height: deviceHeight/3
+    height: deviceHeight/3,
+    marginBottom: 1.5
   },
   detailImage: {
     width: deviceWidth,
@@ -186,6 +187,39 @@ export default {
   episodeIcon:{fontSize:15},
 
   episodeMore:{flex:0.05},
+
+  loader:{
+    height:100,
+    top:deviceHeight/2.5,
+    zIndex:1000,
+    position:'absolute'
+  },
+
+  headerView:{ flex: 1, 
+    flexDirection: "row", 
+    alignItems: "flex-end" 
+  },
+
+  headerBeginView:{ flex: 0.8, 
+    flexDirection:"row" 
+  },
+
+  headerIcon:{
+    color: "white", 
+    fontSize: 18 
+  },
+
+  headerEndView:{
+    flex: 0.2,
+    flexDirection: "row",
+    justifyContent: "space-evenly"
+  },
+
+  headerText:{
+    fontSize:18,
+    fontWeight:'bold',
+    color:'white',
+  }
     
   
   

@@ -32,11 +32,22 @@ class Account extends Component {
       <Container>
         <Header androidStatusBarColor="#121212" style={styles.header}>
           <Left>
-            <Image
+            <Button
+                transparent
+                onPress={() => this.props.navigation.goBack()}
+              >
+                <Icon
+                  name="arrow-back"
+                  style={styles.back}
+                />
+              </Button>
+          </Left>
+          <Body>
+          <Image
               style={styles.image}
               source={require("../../../assets/netflixHeader.png")}
             />
-          </Left>
+          </Body>
           <Right>
           <TouchableHighlight onPress={()=>this.props.navigation.navigate("Users")}>
             <Image

@@ -8,9 +8,10 @@ import {
   View,
   RefreshControl,
   Dimensions,
-  TouchableHighlight
+  TouchableOpacity
 } from "react-native";
 import {
+  ActionSheet,
   Button,
   Icon,
   Container,
@@ -88,6 +89,11 @@ const eps = [
   }
 ];
 
+const EPISODE_BUTTONS =["Download","View Details","Cancel"]
+const SCREEN_BUTTONS=["Download All","View Series Details","Cancel"]
+const CANCEL_INDEX = 2
+
+
 export default class App extends Component {
   static navigationOptions = {
     header: null
@@ -104,6 +110,18 @@ export default class App extends Component {
       clicked:false
     };
   }
+
+  showActionSheet(BUTTONS,head){
+    return(ActionSheet.show(
+      {
+        options: BUTTONS,
+        cancelButtonIndex: CANCEL_INDEX,
+        title: head
+      },
+      buttonIndex => {
+        this.setState({ clicked: BUTTONS[buttonIndex] });
+      }))
+ }
 
   _renderScrollViewContent() {
     const data = Array.from({ length: 30 });
@@ -144,8 +162,10 @@ export default class App extends Component {
                   </View>
                 </View>
 
-                <View style={styles1.episodeMore}>
+                <View style={styles1.episodeMore} >
+                  <TouchableOpacity onPress={()=>this.showActionSheet(EPISODE_BUTTONS,"Episode Options")}>
                   <Icon name="md-more" />
+                   </TouchableOpacity>                   
                 </View>
               </View>
             </ListItem>}
@@ -153,6 +173,8 @@ export default class App extends Component {
       </View>
     );
   }
+
+
 
   render() {
     // Because of content inset the scroll value will be negative on iOS so bring
@@ -197,6 +219,10 @@ export default class App extends Component {
       outputRange: [0, 0, -4],
       extrapolate: "clamp"
     });
+    const textOpacity=scrollY.interpolate({
+      inputRange: [0, HEADER_SCROLL_DISTANCE],
+      outputRange: [0, 1],
+    })
 
     return (
       <View style={styles.fill}>
@@ -285,30 +311,28 @@ export default class App extends Component {
             }
           ]}
         >
-          <View style={{ flex: 1, flexDirection: "row", alignItems: "center" }}>
-            <View style={{ flex: 0.8 }}>
+          <View style={styles1.headerView}>
+            <View style={styles1.headerBeginView}>
               <Button
                 transparent
                 onPress={() => this.props.navigation.goBack()}
               >
                 <Icon
                   name="arrow-back"
-                  style={{ color: "white", fontSize: 15 }}
+                  style={styles1.headerIcon}
                 />
               </Button>
+              <Button transparent><Animated.Text style={[styles1.headerText,{opacity:textOpacity}]}>{this.props.navigation.state.params.name}</Animated.Text></Button>
             </View>
             <View
-              style={{
-                flex: 0.2,
-                flexDirection: "row",
-                justifyContent: "space-evenly"
-              }}
+              style={styles1.headerEndView}
             >
+            
               <Button transparent onPress={() => this.props.navigation.navigate("Search")}>
-                <Icon name="search" style={{ color: "white", fontSize: 15 }} />
+                <Icon name="search" style={styles1.headerIcon} />
               </Button>
-              <Button transparent>
-                <Icon name="md-more" style={{ color: "white", fontSize: 15 }} />
+              <Button transparent onPress={()=>this.showActionSheet(SCREEN_BUTTONS,"Options")}>
+                <Icon name="md-more" style={styles1.headerIcon} />
               </Button>
             </View>
           </View>

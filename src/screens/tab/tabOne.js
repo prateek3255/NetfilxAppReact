@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Content,Button } from "native-base";
 import {Image,View,TouchableHighlight,Text,StatusBar} from "react-native";
 import styles from "./styles";
+import debounce from './../DisableDoubleTap/DoubleTap';
 
 class TabOne extends Component {
   // static navigationOptions={
@@ -16,7 +17,7 @@ class TabOne extends Component {
       <Content>
       <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
             <View>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
+            <TouchableHighlight  onPress={debounce(() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'}))} underlayColor="white">
             <View>
               <Image
                style={styles.image} 

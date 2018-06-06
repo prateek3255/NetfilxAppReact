@@ -94,13 +94,14 @@ const AppNavigator = StackNavigator(
     TabHome: { screen: TabHome},
     Search: {screen: Search},
     MyList:{screen:MyList},
+    Account:{screen:Account},
+    Users:{screen:Users},
     Notification: {screen: Notification},
     Download:{screen:Download},
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
     VideoPlayer: {screen:VideoPlayer},
-    Account:{screen:Account},
-    Users:{screen:Users}
+    
 
     },
   {

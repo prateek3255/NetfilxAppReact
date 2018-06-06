@@ -17,6 +17,7 @@ class TabTwo extends Component {
 
   componentDidMount(){
     this.setState({notLoaded:false});
+    this.forceUpdate();
   }
   render() {
     return (
@@ -24,13 +25,13 @@ class TabTwo extends Component {
       <StatusBar backgroundColor='#2B2C30' barStyle='light-content' />
       <View>
         
-            {this.state.notLoaded && (
+            {/* {(
               <ActivityIndicator
-                style={{ height: 80 }}
+                style={styles.loader}
                 color="#C00"
                 size="large"
               />
-            )}
+            )} */}
           </View>
             <View>
             <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
