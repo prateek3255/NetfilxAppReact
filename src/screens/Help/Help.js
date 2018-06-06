@@ -84,7 +84,7 @@ class Help extends Component {
 
             <View style={styles.lastView}>
                 <Text style={styles.firstText}>Contact</Text>
-                <Text style={styles.firstText}>Netflix Customer Service</Text>
+                <Text style={styles.firstText}>Teleflix Customer Service</Text>
                 <Text style={styles.smallText}>We'll connect the call for free using your internet connection.</Text>
                 <View><Button iconLeft dark>
                 <Icon name='ios-call' />

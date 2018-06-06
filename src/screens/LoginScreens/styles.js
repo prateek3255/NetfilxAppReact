@@ -70,7 +70,8 @@ export default {
         flex:1,
         alignItems:'center',
         paddingTop: deviceHeight/20,
-        width: deviceWidth*(2/3)
+        width: deviceWidth*(2/3),
+        marginBottom:deviceHeight/20
    },
    cancelImage:{
        width:deviceWidth,

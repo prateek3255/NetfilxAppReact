@@ -41,7 +41,7 @@ const TabHome = TabNavigator({
 {
   swipeEnabled:true,
   navigationOptions:({navigation})=> ({
-    title:'Netflix',
+    title:'Teleflix',
     headerLeft:(
       <View style={{flex:1,flexDirection:'row'}}>
       <Button

@@ -52,9 +52,9 @@ class Register extends Component {
                         If you decide netflix isn't for you no problem. No commitment. Cancel anytime.
                     </Text>
                 </View>
-                <Image
+                {/* <Image
                 style={styles.cancelImage}
-                source={require("../../../assets/cancel.png")}/>
+                source={require("../../../assets/cancel.png")}/> */}
             </View>
             
                 
