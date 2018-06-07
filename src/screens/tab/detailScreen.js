@@ -109,12 +109,13 @@ export default class App extends Component {
                   </ImageBackground>
                 </CardItem>
                   <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.8 }}>
+                    <View style={{ flex: 0.6, justifyContent:'center' }}>
                       <Text style={styles1.episodesRemaining}>{e.episodes}{' '}Episodes</Text>
                     </View>
+                    <View style={{flex:0.2}}/>
                     <View style={{ flex: 0.2, justifyContent: "center" }}>
                       <Button transparent onPress={()=>this.showActionSheet(SEASONS_BUTTONS,"Season Options")}>
-                        <Icon name="md-more" style={{fontSize:15}}/>
+                        <Icon name="md-more" style={{fontSize:13}}/>
                       </Button>
                     </View>
                   </View>

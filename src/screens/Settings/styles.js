@@ -98,7 +98,34 @@ export default {
     modalListSubTitle:{
         fontWeight:'normal',
         color:'white'
-    }
+    },
+
+    switchView:{
+        flex:0.10,
+        flexDirection:'row',
+        height:deviceHeight/40
+        
+    },
+
+    listBody:{
+        flex:1,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'flex-start'
+    },
+    switchEmpty:{
+        flex:0.80
+    },
+    switch:{flex:0.4,
+        backgroundColor:'white',
+    borderRadius:deviceHeight/80},
+
+    switchOn:{
+    backgroundColor:'#C14748',
+    justifyContent:'flex-end'},
+
+    switchOff:{backgroundColor:'grey',
+    justifyContent:'flex-start'}
   
   
 };

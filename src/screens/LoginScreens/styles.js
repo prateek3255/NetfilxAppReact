@@ -102,7 +102,7 @@ export default {
 },
     login:{
         flex:1,
-        height:(deviceHeight-(deviceHeight/10)),
+        height:(deviceHeight-(deviceHeight/8)),
         justifyContent:'center',
         paddingLeft:deviceWidth/15,
         paddingRight:deviceWidth/15

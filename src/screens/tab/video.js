@@ -29,6 +29,7 @@ import React, {
       currentTime: 0.0,
       paused: false,
       loader:true,
+      buffer:false,
       showIcon:false,
       icon:"ios-pause"
     };
@@ -44,6 +45,10 @@ import React, {
     onProgress = (data) => {
       this.setState({ currentTime: data.currentTime });
     };
+
+    onBuffer=()=>{
+      this.setState({buffer:!this.state.buffer})
+    }
   
     onEnd = () => {
       this.setState({ paused: true })
@@ -118,10 +123,10 @@ import React, {
             <StatusBar
           hidden
         />
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.fullScreen}
             onPress={this.touchablePress}
-          >
+          > */}
             <Video
               ref={(ref) => { this.video = ref }}
               /* For ExoPlayer */
@@ -135,15 +140,16 @@ import React, {
               onLoad={this.onLoad}
               onProgress={this.onProgress}
               onEnd={this.onEnd}
+              onBuffer={this.onBuffer}
               onAudioBecomingNoisy={this.onAudioBecomingNoisy}
               onAudioFocusChanged={this.onAudioFocusChanged}
               repeat={true}
               controls={true}
             />
-         </TouchableOpacity> 
+         {/* </TouchableOpacity>  */}
           <View>
         
-            {this.state.loader && (
+            {(this.state.loader || this.state.buffer) && (
               <ActivityIndicator
                 style={{ height: 80 }}
                 color="#C00"

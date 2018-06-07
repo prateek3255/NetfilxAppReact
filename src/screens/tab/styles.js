@@ -151,7 +151,7 @@ export default {
   height: deviceHeight/35 },
 
   episodesRemaining:{
-      fontSize:14,
+      fontSize:13,
       left:deviceWidth/25
   },
 

@@ -288,7 +288,7 @@ export default class App extends Component {
               }
             ]}
           >
-            <Button rounded style={styles1.button} danger={this.state.clicked} onPress={() => this.setState({ clicked: !this.state.clicked })}>
+            <Button rounded style={styles1.button}  onPress={() => this.setState({ clicked: !this.state.clicked })}>
               <Icon style={styles1.play} name="play" />
             </Button>
           </Animated.View>
