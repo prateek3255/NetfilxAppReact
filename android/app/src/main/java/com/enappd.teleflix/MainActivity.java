@@ -1,4 +1,4 @@
-package com.nativebasekitchensink;
+package com.enappd.teleflix;
 
 import com.facebook.react.ReactActivity;
 import org.devio.rn.splashscreen.SplashScreen; // import this
