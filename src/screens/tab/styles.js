@@ -118,8 +118,8 @@ export default {
     width:deviceWidth/2.25,
     height:deviceHeight/3.1,
     backgroundColor: 'white',
-    marginLeft:deviceHeight/70,
-    marginRight:deviceHeight/70,
+    marginLeft:deviceWidth/60,
+    marginRight:deviceWidth/60,
     marginTop: deviceHeight/70,
     marginBottom: deviceHeight/70,
     alignItems: 'center',
@@ -219,7 +219,8 @@ export default {
     fontSize:18,
     fontWeight:'bold',
     color:'white',
-  }
+  },
+
     
   
   

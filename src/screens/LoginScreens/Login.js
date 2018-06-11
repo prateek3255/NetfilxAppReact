@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container,Content,Button,Header,Left, Right,Icon, Form, Item, Input, Label } from "native-base";
-import {Image,View,TouchableHighlight,Text} from "react-native";
+import {Image,View,TouchableWithoutFeedback,Text} from "react-native";
 import styles from "./styles";
 
 
@@ -30,6 +30,7 @@ class Login extends Component {
               <View style={styles.empty}/>
           <Image
             style={styles.image} 
+            resizeMode={'contain'}
             source={require("../../../assets/netflixHeader.png")}/>
             </View>
           </Left>
@@ -57,7 +58,7 @@ class Login extends Component {
                 <Text style={styles.firstText}>Sign in</Text>
             </Button>
             <Text style={styles.loginBottomText}>Forgot your email or password?</Text>
-            <Text style={styles.loginBottomText}>New to Netflix? Sign up now.</Text>
+            <Text style={styles.loginBottomText}>New to Teleflix? Sign up now.</Text>
              </View>
         </Content>
       </Container>

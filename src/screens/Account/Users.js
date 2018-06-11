@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container,Content,Button,Header,Left, Body,Title,Icon, Card, CardItem, Switch, Separator, Right } from "native-base";
-import {Image,View,TouchableHighlight,Text} from "react-native";
+import {Image,View,TouchableWithoutFeedback,Text} from "react-native";
 import styles from "./styles";
 
 class Users extends Component {
@@ -30,6 +30,7 @@ class Users extends Component {
           <Body>
           <Image
               style={styles.image}
+              resizeMode={'contain'}
               source={require("../../../assets/netflixHeader.png")}
             />
           </Body>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container,Content,Button,Header,Left, Body,Title,Icon, Right } from "native-base";
-import {Image,View,TouchableHighlight} from "react-native";
+import {Image,View,TouchableWithoutFeedback} from "react-native";
 import styles from "./styles";
 
 const datas=[
@@ -61,12 +61,14 @@ class MyList extends Component {
             
               {datas.map((e,i)=>{
           return (
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})} underlayColor="white">
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate("Detail",{image:0,name:'Breaking Bad'})}>
           <Image
           source={e.img}
           style={styles.images}
           key={i}/>
-          </TouchableHighlight> )   
+          </TouchableWithoutFeedback> 
+          )  
+
         })}
             </View>
             

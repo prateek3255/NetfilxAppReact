@@ -54,7 +54,7 @@ const TabHome = TabNavigator({
     ),
     headerRight:(
       <View style={{flex:1,flexDirection:'row'}}>
-      <Button transparent onPress={() => navigation.navigate("Search")}>
+      <Button  transparent onPress={() => navigation.navigate("Search")}>
               <Icon name="search" style={{color:'white'}}/>
             </Button>
             <Button transparent>
@@ -100,7 +100,9 @@ const AppNavigator = StackNavigator(
     Download:{screen:Download},
     Detail: {screen: Detail},
     Episodes: {screen:Episodes},
-    VideoPlayer: {screen:VideoPlayer},
+    VideoPlayer: {screen:VideoPlayer, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
     
 
     },

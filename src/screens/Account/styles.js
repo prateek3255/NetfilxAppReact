@@ -52,7 +52,7 @@ export default {
         backgroundColor:'#f3f3f3',
     },
     image:{
-        height:deviceHeight/25,
+        height:(deviceWidth/4)*54,
         width:deviceWidth/4,
     },
     accountImage:{
@@ -123,6 +123,11 @@ export default {
     buttonItems:{
         flex:1,
         justifyContent:'space-between',
+    },
+    buttonItems2:{
+        flex:1,
+        justifyContent:'space-between',
+        height:deviceHeight/5
     },
     buttonItemText:{
         fontWeight:'bold'

@@ -4,9 +4,10 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get('window').width;
 
 
+const ratio=deviceWidth/200
 export default {
   image:{
-      height:deviceHeight/40,
+      height:(deviceWidth/6)*54,
       width:deviceWidth/6,
   },
   registerContent:{
@@ -120,6 +121,7 @@ export default {
         flex:0.07,
         justifyContent:'center',
         alignItems:'center',
+        height:deviceHeight/10
     },
     loginBottomText:{
         fontSize:17,

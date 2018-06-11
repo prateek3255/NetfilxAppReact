@@ -16,7 +16,7 @@ import {
   Separator,
   Right
 } from "native-base";
-import { Image, View, TouchableHighlight, Text } from "react-native";
+import { Image, View, TouchableWithoutFeedback, Text } from "react-native";
 import styles from "./styles";
 
 class Account extends Component {
@@ -45,16 +45,17 @@ class Account extends Component {
           <Body>
           <Image
               style={styles.image}
+              resizeMode={'contain'}
               source={require("../../../assets/netflixHeader.png")}
             />
           </Body>
           <Right>
-          <TouchableHighlight onPress={()=>this.props.navigation.navigate("Users")}>
+          <TouchableWithoutFeedback onPress={()=>this.props.navigation.navigate("Users")}>
             <Image
               style={styles.accountImage}
               source={require("../../../assets/profile.png")}
             />
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
           </Right>
         </Header>
         <Content style={styles.content} >
@@ -72,7 +73,7 @@ class Account extends Component {
                 </ListItem>
                 <ListItem>
                   <View style={styles.normalItems}>
-                    <Text style={styles.normalText}>Check Email</Text>
+                    <Text style={styles.normalText}>Change Email</Text>
                     <Icon name="navigate-next" type="MaterialIcons" style={styles.normalIcon}/>
                   </View>
                 </ListItem>
@@ -107,10 +108,10 @@ class Account extends Component {
                   </View>
                 </ListItem>
                 <ListItem>
-                  <View style={styles.buttonItems}>
+                  <View style={styles.buttonItems2}>
                     <Text style={styles.buttonItemText}>Redeem gift card or promo code</Text>
                     <Item regular>
-                      <Input placeholder='Enter code or pin' />
+                      <Input keyboardType="phone-pad" placeholder='Enter code or pin' />
                     </Item>
                     <Button block light >
                       <Text>Redeem</Text>

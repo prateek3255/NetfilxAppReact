@@ -42,7 +42,7 @@ export default {
     },
 
     image:{
-        height:deviceHeight/40,
+        height:(deviceWidth/23),
         width:deviceWidth/6,
         marginTop:deviceHeight/40
     },

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Container,Content,Button,Header,Left, Right,Icon } from "native-base";
-import {Image,View,TouchableHighlight,Text,LinearGradient} from "react-native";
+import { Container,Content,Button, Right,Icon } from "native-base";
+import {Image,View,TouchableWithoutFeedback,Text,} from "react-native";
 import styles from "./styles";
-
+import WhiteHeader from "../Headers/WhiteHeader";
 
 class Register extends Component {
   static navigationOptions={
@@ -15,10 +15,11 @@ class Register extends Component {
   render() {
     return (
         <Container>
-        <Header androidStatusBarColor="white" style={styles.header}>
+        {/* <Header androidStatusBarColor="white" style={styles.header}>
           <Left>
           <Image
             style={styles.image} 
+            resizeMode={'contain'}
             source={require("../../../assets/netflixHeader.png")}/>
           </Left>
          
@@ -30,7 +31,11 @@ class Register extends Component {
               <Text style={styles.headerText}>HELP</Text>
             </Button>
           </Right>
-        </Header>
+        </Header> */}
+
+        <WhiteHeader login={()=>this.props.navigation.navigate("Login")} help={()=>this.props.navigation.navigate("Help")}/>
+
+
         <Content style={styles.registerContent}>
             <Image style={styles.contentImage} source={require("../../../assets/RegisterBackground.jpg")}/>
             <View style={styles.textView}>
@@ -49,7 +54,7 @@ class Register extends Component {
                 </View>
                 <View style={styles.thirdTextView}>
                     <Text style={styles.firstText}>
-                        If you decide netflix isn't for you no problem. No commitment. Cancel anytime.
+                        If you decide Teleflix isn't for you no problem. No commitment. Cancel anytime.
                     </Text>
                 </View>
                 {/* <Image

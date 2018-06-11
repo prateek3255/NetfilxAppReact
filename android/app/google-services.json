@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "968348539132",
+    "firebase_url": "https://teleflix-adbfe.firebaseio.com",
+    "project_id": "teleflix-adbfe",
+    "storage_bucket": "teleflix-adbfe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968348539132:android:10fe7412607fabf1",
+        "android_client_info": {
+          "package_name": "com.enappd.teleflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968348539132-hbs764mtjnm0rfq7fon2c0vk888grkfm.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "968348539132-hbs764mtjnm0rfq7fon2c0vk888grkfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhzRP8JI6lg6TsJmxd0HjDyu_McteUCng"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

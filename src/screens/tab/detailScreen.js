@@ -9,7 +9,7 @@ import {
   RefreshControl,
   Dimensions,
   ImageBackground,
-  TouchableHighlight
+  TouchableWithoutFeedback
 } from "react-native";
 import {
   Button,
@@ -98,7 +98,7 @@ export default class App extends Component {
             {datas.map((e,i)=>{
               return(
                 <View key={i}>
-            <TouchableHighlight onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
+            <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate("Episodes",{image:1,name:'Narcos'})}>
               <Card style={styles1.seasonCard}>
                 <CardItem cardBody>
                   <ImageBackground
@@ -109,11 +109,11 @@ export default class App extends Component {
                   </ImageBackground>
                 </CardItem>
                   <View style={styles1.cardFoot}>
-                    <View style={{ flex: 0.6, justifyContent:'center' }}>
+                    <View style={{ flex: 0.8, justifyContent:'center', alignItems:'flex-start' }}>
                       <Text style={styles1.episodesRemaining}>{e.episodes}{' '}Episodes</Text>
                     </View>
                     <View style={{flex:0.2}}/>
-                    <View style={{ flex: 0.2, justifyContent: "center" }}>
+                    <View style={{ flex: 0.3, justifyContent: "center", alignItems:'flex-start' }}>
                       <Button transparent onPress={()=>this.showActionSheet(SEASONS_BUTTONS,"Season Options")}>
                         <Icon name="md-more" style={{fontSize:13}}/>
                       </Button>
@@ -121,7 +121,7 @@ export default class App extends Component {
                   </View>
                 
               </Card>
-              </TouchableHighlight>
+              </TouchableWithoutFeedback>
             </View>
               )
             })}
@@ -277,11 +277,11 @@ export default class App extends Component {
                 <Icon name="ios-star" style={styles1.background} />
                 <Icon name="ios-star" style={styles1.background} />
               </View>
-              <Text style={styles1.rateText}>5.0/5</Text>
+              <Text style={styles1.rateText}>{'  '}5.0/5</Text>
               <View style={styles1.rate} />
               <View style={styles1.comment}>
                 <Icon name="md-chatbubbles" style={styles1.background} />
-                <Text style={styles1.rateText}>279</Text>
+                <Text style={styles1.rateText}>{'   '}279</Text>
               </View>
             </View>
             <View style={styles1.show}>

@@ -9,6 +9,7 @@ import React, {
     View,
     StatusBar,
     ActivityIndicator,
+    Dimensions
   } from 'react-native';
 
   import {Icon, Button} from 'native-base';
@@ -90,11 +91,7 @@ import React, {
         },2500 )
           })
         }
-        else{
-          this.setState({
-            showIcon:false
-          })
-        }
+        
     }
 
     toggle=()=>{
@@ -157,16 +154,16 @@ import React, {
               />
             )}
             
-            {!this.state.loader && this.state.showIcon && (
-              <Button transparent onPress={this.toggle}>
-              <Icon name={this.state.icon} style={{color:'white', fontSize:50}}  />
+            {/* {!this.state.loader && this.state.showIcon && (
+              <Button transparent onPress={this.props.navigation.goBack()}>
+              <Icon name="cross" type="Entypo" style={{color:'white', fontSize:50}}  />
               </Button>
-            )}
+            )} */}
 
            
           </View>
          
-         { !this.state.loader &&  this.state.showIcon &&
+         {/* { !this.state.loader &&  this.state.showIcon &&
           (<View style={styles.controls}>
 
   
@@ -177,13 +174,22 @@ import React, {
               </View>
             </View>
           </View>)
-         }
+         } */}
+         {/* <View style={styles.videoCancel}>
+         { !this.state.loader &&  this.state.showIcon &&(
+              <TouchableOpacity transparent onPress={this.props.navigation.goBack()}>
+              <Icon name="cross" type="Entypo" style={{color:'white', fontSize:50}}  />
+              </TouchableOpacity>
+            )}
+         </View> */}
         </View>
       );
     }
   }
   
-  
+  const deviceHeight = Dimensions.get("window").height;
+  const deviceWidth = Dimensions.get('window').width;
+
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -251,4 +257,10 @@ import React, {
       paddingRight: 2,
       lineHeight: 12,
     },
+    videoCancel:{
+      top:-deviceHeight/2.2,
+      left:-deviceWidth/2.2,
+      height:deviceWidth/10,
+      width:deviceWidth/10
+    }
   });
