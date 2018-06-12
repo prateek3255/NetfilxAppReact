@@ -33,6 +33,10 @@ import Help from "./screens/Help/Help";
 import Download from "./screens/Downloads/download";
 import Step1Main from "./screens/SignUp/Step1Main";
 import Step1Content from "./screens/SignUp/Step1Content";
+import Step2Main from "./screens/SignUp/Step2Main";
+import Step2Content from "./screens/SignUp/Step2Content";
+import Step3Main from "./screens/SignUp/Step3Main";
+import Step3Content from "./screens/SignUp/Step3Content";
 
 YellowBox.ignoreWarnings(["Warning: isMounted( ... ) is deprecated"]);
 
@@ -42,6 +46,7 @@ const TabHome = TabNavigator({
 },
 {
   swipeEnabled:true,
+  lazy:false,
   navigationOptions:({navigation})=> ({
     title:'Teleflix',
     headerLeft:(
@@ -86,15 +91,28 @@ const TabHome = TabNavigator({
 const AppNavigator = StackNavigator(
   {
     // Drawer: { screen: Drawer },
+    Register:{screen:Register, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
     Step1Main:{screen:Step1Main, navigationOptions:({navigation})=>({
       drawerLockMode:"locked-closed"
     })},
     Step1Content:{screen:Step1Content, navigationOptions:({navigation})=>({
       drawerLockMode:"locked-closed"
     })},
-    Register:{screen:Register, navigationOptions:({navigation})=>({
+    Step2Main:{screen:Step2Main, navigationOptions:({navigation})=>({
       drawerLockMode:"locked-closed"
     })},
+    Step2Content:{screen:Step2Content, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
+    Step3Main:{screen:Step3Main, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
+    Step3Content:{screen:Step3Content, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
+   
     Login:{screen:Login, navigationOptions:({navigation})=>({
       drawerLockMode:"locked-closed"
     })},
@@ -115,7 +133,7 @@ const AppNavigator = StackNavigator(
 
     },
   {
-    initialRouteName: "Step1Main",
+    initialRouteName: "Register",
     // headerMode: "none"
   }
 );

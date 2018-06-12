@@ -42,7 +42,7 @@ class Register extends Component {
                 <Text style={styles.firstText}>See what's next</Text>
                 <Text style={styles.secondText}>Watch anywhere. Cancel at Any Time</Text>
                 <View>
-                    <Button style={styles.button}>
+                    <Button style={styles.button} onPress={()=>this.props.navigation.navigate("Step1Main")}>
                         <Text style={styles.buttonText}>Join Free For A Month</Text>
                     </Button>
                 </View>

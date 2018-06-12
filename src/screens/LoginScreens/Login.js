@@ -46,19 +46,19 @@ class Login extends Component {
              <Text style={styles.firstText}>Sign in</Text>
              <Form>
             <Item floatingLabel last>
-              <Label style={styles.inputLabel}>Username</Label>
-              <Input style={styles.input}/>
+              <Label style={styles.inputLabel} >Username</Label>
+              <Input style={styles.input} keyboardType="email-address"/>
             </Item>
             <Item floatingLabel last>
               <Label style={styles.inputLabel}>Password</Label>
-              <Input style={styles.input}/>
+              <Input style={styles.input} secureTextEntry/>
             </Item>
-            </Form> 
+            </Form>
             <Button style={styles.loginButton} onPress={() => this.props.navigation.navigate("TabHome")}>
                 <Text style={styles.firstText}>Sign in</Text>
             </Button>
             <Text style={styles.loginBottomText}>Forgot your email or password?</Text>
-            <Text style={styles.loginBottomText}>New to Teleflix? Sign up now.</Text>
+            <Text style={styles.loginBottomText} onPress={() => this.props.navigation.navigate("Register")}>New to Teleflix? Sign up now.</Text>
              </View>
         </Content>
       </Container>

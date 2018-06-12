@@ -5,7 +5,7 @@ import styles from "./styles";
 import WhiteHeader from "../Headers/WhiteHeader";
 import Benifit from "./Benifit";
 
-class Step1Main extends Component {
+class Step1Content extends Component {
   static navigationOptions={
     header:null
   }
@@ -84,4 +84,4 @@ class Step1Main extends Component {
     );
   }
 }
-export default Step1Main;
+export default Step1Content;

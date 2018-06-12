@@ -17,10 +17,31 @@ export default{
         alignItems:'center',
         height:deviceHeight    
     },
+    cont2Content:{
+        backgroundColor:'white',
+        justifyContent:'center',
+        alignItems:'center', 
+        flex:1
+    },
     mainView:{
         // backgroundColor:'black',
         flex:0.5,
         width:deviceWidth*(6/7)
+    },
+    main3View:{
+        // backgroundColor:'black',
+        flex:0.6,
+        width:deviceWidth*(6/7)
+    },
+    main3Button:{
+        flex:0.2,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'space-evenly',
+        borderColor:'grey',
+        borderStyle:'solid',
+        borderWidth:2,
+        width:deviceWidth/1.8
     },
     tick:{
         color:"#C14748",
@@ -48,6 +69,10 @@ export default{
         flex:0.95,
         width:deviceWidth*(6/7),
         height:deviceHeight, 
+    },
+    content2View:{
+        flex:0.9,
+        width:deviceWidth*(6/7),
     },
     packageView:{
         flex:0.25,
@@ -92,6 +117,20 @@ export default{
     },
     notSelectedText:{
         color:"grey"
+    },
+    bold:{
+        fontSize:17,
+        fontWeight:'bold'
+    },
+    simpleBold:{
+        fontWeight:'bold'
+    },
+    creditCard:{
+        flexDirection:'row'
+    },
+    checkBox:{
+        flexDirection:'row',
+        justifyContent:'space-between'
     }
 }
 
