@@ -31,6 +31,8 @@ import Users from "./screens/Account/Users";
 import Search from "./screens/search/Search";
 import Help from "./screens/Help/Help";
 import Download from "./screens/Downloads/download";
+import Step1Main from "./screens/SignUp/Step1Main";
+import Step1Content from "./screens/SignUp/Step1Content";
 
 YellowBox.ignoreWarnings(["Warning: isMounted( ... ) is deprecated"]);
 
@@ -84,6 +86,12 @@ const TabHome = TabNavigator({
 const AppNavigator = StackNavigator(
   {
     // Drawer: { screen: Drawer },
+    Step1Main:{screen:Step1Main, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
+    Step1Content:{screen:Step1Content, navigationOptions:({navigation})=>({
+      drawerLockMode:"locked-closed"
+    })},
     Register:{screen:Register, navigationOptions:({navigation})=>({
       drawerLockMode:"locked-closed"
     })},
@@ -107,7 +115,7 @@ const AppNavigator = StackNavigator(
 
     },
   {
-    initialRouteName: "Register",
+    initialRouteName: "Step1Main",
     // headerMode: "none"
   }
 );
