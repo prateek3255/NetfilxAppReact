@@ -100,7 +100,7 @@ export default{
     contentEmpty:{flex:0.05},
     centerText:{textAlign:"center"},
     contentButton:{
-        flex:0.10,
+        height:deviceHeight/15,
         width:deviceWidth*(6/7),
         backgroundColor:"#C14748",
         justifyContent:"center",
@@ -131,6 +131,10 @@ export default{
     checkBox:{
         flexDirection:'row',
         justifyContent:'space-between'
+    },
+    errorText:{
+        color:'red',
+        marginTop:deviceHeight/80
     }
 }
 

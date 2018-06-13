@@ -25,7 +25,7 @@ export default {
     height: deviceHeight/11,
     width: deviceHeight/11,
     backgroundColor: "white",
-    elevation:15
+    zIndex:11
   },
   buttonAlign: {
     flex: 1,

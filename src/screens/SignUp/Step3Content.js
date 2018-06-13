@@ -3,7 +3,7 @@ import { Container,Content,Button, Left,Icon, Input,Form,Item,ListItem,Body,Chec
 import {Image,View,TouchableWithoutFeedback,Text} from "react-native";
 import styles from "./styles";
 import WhiteHeader from "../Headers/WhiteHeader";
-import Benifit from "./Benifit";
+
 
 class Step3Content extends Component {
   static navigationOptions={
@@ -57,7 +57,7 @@ class Step3Content extends Component {
               <Text>{'    '}I am over 18 and I agree to the terms of use and privacy policy.</Text>
               </View>
           <View style={styles.contentEmpty}/>
-            <Button style={styles.mainButton} onPress={()=>this.props.navigation.navigate("Login")}>
+            <Button style={styles.contentButton} onPress={()=>this.props.navigation.navigate("Login")}>
                 <Text style={styles.mainButtonText}>Start Membership</Text>
             </Button>
            </View>

@@ -28,7 +28,7 @@ class Step2Main extends Component {
             <View style={styles.mainEmpty}/>
             <Text>Use your email and create a password to watch teleflix on any device at any time.</Text>
             <View style={styles.mainEmpty}/>
-            <Button style={styles.mainButton} onPress={()=>this.props.navigation.navigate("Step2Content")}>
+            <Button style={styles.mainButton} onPress={()=>this.props.navigation.navigate("Step2Content",{plan:this.props.navigation.state.params.plan})}>
                 <Text style={styles.mainButtonText}>Continue</Text>
             </Button>
            </View>

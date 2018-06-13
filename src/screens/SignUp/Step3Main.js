@@ -32,7 +32,7 @@ class Step3Main extends Component {
             <View style={styles.contentEmpty}/>
             <Text >No Commitments. Cancel online at any time.</Text>
             <View style={styles.mainEmpty}/>
-            <TouchableWithoutFeedback onPress={()=>this.props.navigation.navigate("Step3Content")}>
+            <TouchableWithoutFeedback onPress={()=>this.props.navigation.navigate("Step3Content",{uid:this.props.navigation.state.params.uid,plan:this.props.navigation.state.params.plan})}>
             <View style={styles.main3Button}>
             <Text>Credit or Debit Card</Text>
             <Icon name="navigate-next" type="MaterialIcons"/>

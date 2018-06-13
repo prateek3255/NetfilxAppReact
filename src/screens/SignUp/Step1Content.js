@@ -73,7 +73,7 @@ class Step1Content extends Component {
                 <View style={styles.contentEmpty}/>
                 <Benifit icon={true} first="check" second="check" third="check" selected={this.state.selected}/>
                 <View style={styles.contentEmpty}/>
-                <Button style={styles.contentButton} onPress={()=>this.props.navigation.navigate("Step2Main")}>
+                <Button style={styles.contentButton} onPress={()=>this.props.navigation.navigate("Step2Main",{plan:this.state.selected})}>
                 <Text style={styles.mainButtonText}>Continue</Text>
             </Button>
            </View>
